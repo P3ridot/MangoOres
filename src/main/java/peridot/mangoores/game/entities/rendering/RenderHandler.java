@@ -9,13 +9,10 @@ import peridot.mangoores.game.entities.rendering.entities.RenderGorof;
 
 public class RenderHandler {
 
-    public static void registerEntityRenders()
-    {
-        RenderingRegistry.registerEntityRenderingHandler(EntityGorof.class, new IRenderFactory<EntityGorof>()
-        {
+    public static void registerEntityRenders() {
+        RenderingRegistry.registerEntityRenderingHandler(EntityGorof.class, new IRenderFactory<EntityGorof>() {
             @Override
-            public Render<? super EntityGorof> createRenderFor(RenderManager manager)
-            {
+            public Render<? super EntityGorof> createRenderFor(RenderManager manager) {
                 return new RenderGorof(manager);
             }
         });

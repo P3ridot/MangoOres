@@ -1,6 +1,5 @@
 package peridot.mangoores.game.items.base;
 
-import net.minecraft.init.Items;
 import net.minecraft.item.ItemFood;
 import peridot.mangoores.MangoOres;
 import peridot.mangoores.game.blocks.IHasModel;
@@ -10,10 +9,10 @@ import peridot.mangoores.util.Reference;
 
 public class FoodBase extends ItemFood implements IHasModel {
 
-    public FoodBase(String name, int amount, float saturation, boolean isWolfFood){
+    public FoodBase(String name, int amount, float saturation, boolean isWolfFood) {
         super(amount, saturation, isWolfFood);
 
-        setUnlocalizedName(Reference.MOD_ID+"."+name);
+        setUnlocalizedName(Reference.MOD_ID + "." + name);
         setRegistryName(name);
         setCreativeTab(ModCreativeTabs.CREATIVE_FOOD);
 

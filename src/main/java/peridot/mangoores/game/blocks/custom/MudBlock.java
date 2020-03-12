@@ -25,7 +25,7 @@ public class MudBlock extends BlockBase implements IHasModel {
     @Nullable
     @Override
     public AxisAlignedBB getCollisionBoundingBox(IBlockState state, IBlockAccess access, BlockPos pos) {
-        return new AxisAlignedBB(0, 0, 0, 1, 0.0625*12.5, 1);
+        return new AxisAlignedBB(0, 0, 0, 1, 0.0625 * 12.5, 1);
     }
 
     @Override
@@ -35,7 +35,7 @@ public class MudBlock extends BlockBase implements IHasModel {
     }
 
     @Override
-    public void registerModels(){
+    public void registerModels() {
         MangoOres.proxy.registerItemRenderer(Item.getItemFromBlock(this), 0, "inventory");
     }
 }

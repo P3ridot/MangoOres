@@ -10,13 +10,12 @@ import peridot.mangoores.game.init.ModCreativeTabs;
 import peridot.mangoores.game.items.ModItems;
 import peridot.mangoores.util.Reference;
 
-import javax.annotation.Nullable;
 import java.util.List;
 
 public class ItemMangoWrench extends Item implements IHasModel {
 
-    public ItemMangoWrench(String name){
-        setUnlocalizedName(Reference.MOD_ID+"."+name);
+    public ItemMangoWrench(String name) {
+        setUnlocalizedName(Reference.MOD_ID + "." + name);
         setRegistryName(name);
         setCreativeTab(ModCreativeTabs.CREATIVE_TOOLS);
         setMaxStackSize(1);

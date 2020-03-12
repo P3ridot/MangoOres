@@ -9,10 +9,10 @@ import peridot.mangoores.util.Reference;
 
 public class SwordBase extends ItemSword implements IHasModel {
 
-    public SwordBase(String name, ToolMaterial material){
+    public SwordBase(String name, ToolMaterial material) {
         super(material);
 
-        setUnlocalizedName(Reference.MOD_ID+"."+name);
+        setUnlocalizedName(Reference.MOD_ID + "." + name);
         setRegistryName(name);
         setCreativeTab(ModCreativeTabs.CREATIVE_TOOLS);
 

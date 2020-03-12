@@ -1,19 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
-
   "pattern": [
     "I",
     "I",
     "I"
   ],
-
   "key": {
     "I": {
       "type": "forge:ore_dict",
       "ore": "ingotIron"
     }
   },
-
   "result": {
     "item": "mangoores:iron_rod",
     "count": 1

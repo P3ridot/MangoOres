@@ -1,5 +1,7 @@
 {
   "variants": {
-    "normal": { "model": "mangoores:vibranium_block" }
+    "normal": {
+      "model": "mangoores:vibranium_block"
+    }
   }
 }

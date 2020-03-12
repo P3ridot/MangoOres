@@ -1,11 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
-
   "pattern": [
     "FMF",
     "M M"
   ],
-
   "key": {
     "M": {
       "type": "forge:ore_dict",
@@ -16,7 +14,6 @@
       "data": 0
     }
   },
-
   "result": {
     "item": "mangoores:mangonium_helmet",
     "count": 1

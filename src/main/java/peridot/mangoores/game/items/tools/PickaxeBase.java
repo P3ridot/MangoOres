@@ -9,10 +9,10 @@ import peridot.mangoores.util.Reference;
 
 public class PickaxeBase extends ItemPickaxe implements IHasModel {
 
-    public PickaxeBase(String name, ToolMaterial material){
+    public PickaxeBase(String name, ToolMaterial material) {
         super(material);
 
-        setUnlocalizedName(Reference.MOD_ID+"."+name);
+        setUnlocalizedName(Reference.MOD_ID + "." + name);
         setRegistryName(name);
         setCreativeTab(ModCreativeTabs.CREATIVE_TOOLS);
 

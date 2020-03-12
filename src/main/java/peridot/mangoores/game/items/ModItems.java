@@ -19,7 +19,7 @@ public class ModItems {
     public static final List<Item> items = new ArrayList<>();
 
     //MATERIALS - ARMORS
-    public static final ItemArmor.ArmorMaterial ARMOR_MATERIAL_MANGONIUM = EnumHelper.addArmorMaterial("mangonium", Reference.MOD_ID + ":mangonium", 50, new int[]{4,7, 9, 4}, 11, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 3.0F);
+    public static final ItemArmor.ArmorMaterial ARMOR_MATERIAL_MANGONIUM = EnumHelper.addArmorMaterial("mangonium", Reference.MOD_ID + ":mangonium", 50, new int[]{4, 7, 9, 4}, 11, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 3.0F);
 
     //ITEMS
     public static final Item MARKER = new ItemBase("marker");

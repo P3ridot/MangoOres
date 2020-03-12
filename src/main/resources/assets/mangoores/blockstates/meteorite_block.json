@@ -1,5 +1,7 @@
 {
   "variants": {
-    "normal": { "model": "mangoores:meteorite_block" }
+    "normal": {
+      "model": "mangoores:meteorite_block"
+    }
   }
 }

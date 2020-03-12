@@ -2,7 +2,6 @@ package peridot.mangoores.game.entities.rendering.entities;
 
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.entity.RenderManager;
-import net.minecraft.client.renderer.entity.layers.LayerHeldItem;
 import net.minecraft.util.ResourceLocation;
 import peridot.mangoores.game.entities.entity.EntityGorof;
 import peridot.mangoores.game.entities.models.ModelGorof;

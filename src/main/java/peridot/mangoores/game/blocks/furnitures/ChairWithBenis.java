@@ -12,12 +12,12 @@ import peridot.mangoores.util.Reference;
 
 public class ChairWithBenis extends Block {
 
-    private static final AxisAlignedBB BOUNDING_BOX = new AxisAlignedBB(0, 0, 0, 1, 25*0.0625, 1);
+    private static final AxisAlignedBB BOUNDING_BOX = new AxisAlignedBB(0, 0, 0, 1, 25 * 0.0625, 1);
 
     public ChairWithBenis(String name, Material material) {
         super(material);
 
-        setUnlocalizedName(Reference.MOD_ID+"."+name);
+        setUnlocalizedName(Reference.MOD_ID + "." + name);
         setRegistryName(name);
 
         ModBlocks.blocks.add(this);
@@ -29,12 +29,12 @@ public class ChairWithBenis extends Block {
     }
 
     @Override
-    public boolean isFullCube(IBlockState state){
-        return  false;
+    public boolean isFullCube(IBlockState state) {
+        return false;
     }
 
     @Override
-    public BlockRenderLayer getBlockLayer(){
+    public BlockRenderLayer getBlockLayer() {
         return BlockRenderLayer.CUTOUT;
     }
 

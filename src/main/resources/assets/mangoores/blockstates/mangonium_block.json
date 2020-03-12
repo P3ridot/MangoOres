@@ -1,5 +1,7 @@
 {
   "variants": {
-    "normal": { "model": "mangoores:mangonium_block" }
+    "normal": {
+      "model": "mangoores:mangonium_block"
+    }
   }
 }

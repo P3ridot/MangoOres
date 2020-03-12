@@ -9,8 +9,8 @@ import peridot.mangoores.util.Reference;
 
 public class ItemBase extends Item implements IHasModel {
 
-    public ItemBase(String name){
-        setUnlocalizedName(Reference.MOD_ID+"."+name);
+    public ItemBase(String name) {
+        setUnlocalizedName(Reference.MOD_ID + "." + name);
         setRegistryName(name);
         setCreativeTab(ModCreativeTabs.CREATIVE_ITEMS);
 

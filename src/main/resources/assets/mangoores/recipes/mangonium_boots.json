@@ -1,11 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
-
   "pattern": [
     "F F",
     "M M"
   ],
-
   "key": {
     "M": {
       "type": "forge:ore_dict",
@@ -16,7 +14,6 @@
       "data": 0
     }
   },
-
   "result": {
     "item": "mangoores:mangonium_boots",
     "count": 1

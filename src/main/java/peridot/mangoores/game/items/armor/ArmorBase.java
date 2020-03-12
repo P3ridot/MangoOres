@@ -10,10 +10,10 @@ import peridot.mangoores.util.Reference;
 
 public class ArmorBase extends ItemArmor implements IHasModel {
 
-    public ArmorBase(String name, ArmorMaterial material, int renderIndex, EntityEquipmentSlot slot){
+    public ArmorBase(String name, ArmorMaterial material, int renderIndex, EntityEquipmentSlot slot) {
         super(material, renderIndex, slot);
 
-        setUnlocalizedName(Reference.MOD_ID+"."+name);
+        setUnlocalizedName(Reference.MOD_ID + "." + name);
         setRegistryName(name);
         setCreativeTab(ModCreativeTabs.CREATIVE_ARMORS);
 

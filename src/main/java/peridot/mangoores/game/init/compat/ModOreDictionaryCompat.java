@@ -6,7 +6,7 @@ import peridot.mangoores.game.items.ModItems;
 
 public class ModOreDictionaryCompat {
 
-    public static void registerOreDicionaries(){
+    public static void registerOreDicionaries() {
         OreDictionary.registerOre("rodIron", ModItems.IRON_ROD);
         OreDictionary.registerOre("rodGold", ModItems.GOLD_ROD);
 

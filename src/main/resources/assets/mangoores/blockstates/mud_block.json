@@ -1,5 +1,7 @@
 {
   "variants": {
-    "normal": { "model": "mangoores:mud_block" }
+    "normal": {
+      "model": "mangoores:mud_block"
+    }
   }
 }

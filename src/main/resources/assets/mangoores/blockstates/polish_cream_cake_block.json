@@ -1,5 +1,7 @@
 {
   "variants": {
-    "normal": { "model": "mangoores:polish_cream_cake_block" }
+    "normal": {
+      "model": "mangoores:polish_cream_cake_block"
+    }
   }
 }

@@ -20,10 +20,10 @@ import peridot.mangoores.util.Reference;
 
 public class BlockHorizontalBase extends BlockHorizontal implements IHasModel {
 
-    public BlockHorizontalBase(String name, Material material){
+    public BlockHorizontalBase(String name, Material material) {
         super(material);
 
-        setUnlocalizedName(Reference.MOD_ID+"."+name);
+        setUnlocalizedName(Reference.MOD_ID + "." + name);
         setRegistryName(name);
         setCreativeTab(ModCreativeTabs.CREATIVE_BLOCKS);
 
@@ -31,10 +31,10 @@ public class BlockHorizontalBase extends BlockHorizontal implements IHasModel {
         ModItems.items.add(new ItemBlock(this).setRegistryName(this.getRegistryName()));
     }
 
-    public BlockHorizontalBase(String name, Material material, float hardness){
+    public BlockHorizontalBase(String name, Material material, float hardness) {
         super(material);
 
-        setUnlocalizedName(Reference.MOD_ID+"."+name);
+        setUnlocalizedName(Reference.MOD_ID + "." + name);
         setRegistryName(name);
         setCreativeTab(ModCreativeTabs.CREATIVE_BLOCKS);
         setHardness(hardness);
@@ -43,10 +43,10 @@ public class BlockHorizontalBase extends BlockHorizontal implements IHasModel {
         ModItems.items.add(new ItemBlock(this).setRegistryName(this.getRegistryName()));
     }
 
-    public BlockHorizontalBase(String name, Material material, float hardness, float resistance){
+    public BlockHorizontalBase(String name, Material material, float hardness, float resistance) {
         super(material);
 
-        setUnlocalizedName(Reference.MOD_ID+"."+name);
+        setUnlocalizedName(Reference.MOD_ID + "." + name);
         setRegistryName(name);
         setCreativeTab(ModCreativeTabs.CREATIVE_BLOCKS);
         setHardness(hardness);
@@ -59,7 +59,7 @@ public class BlockHorizontalBase extends BlockHorizontal implements IHasModel {
     public BlockHorizontalBase(String name, Material material, float hardness, float resistance, String tool, int harvestLevel) {
         super(material);
 
-        setUnlocalizedName(Reference.MOD_ID+"."+name);
+        setUnlocalizedName(Reference.MOD_ID + "." + name);
         setRegistryName(name);
         setCreativeTab(ModCreativeTabs.CREATIVE_BLOCKS);
         setHardness(hardness);
@@ -76,22 +76,22 @@ public class BlockHorizontalBase extends BlockHorizontal implements IHasModel {
     }
 
     @Override
-    public int getMetaFromState(IBlockState state){
+    public int getMetaFromState(IBlockState state) {
         return state.getValue(FACING).getHorizontalIndex();
     }
 
     @Override
-    public IBlockState getStateFromMeta(int meta){
+    public IBlockState getStateFromMeta(int meta) {
         return getDefaultState().withProperty(FACING, EnumFacing.getHorizontal(meta));
     }
 
     @Override
-    protected BlockStateContainer createBlockState(){
+    protected BlockStateContainer createBlockState() {
         return new BlockStateContainer(this, FACING);
     }
 
     @Override
-    public void registerModels(){
+    public void registerModels() {
         MangoOres.proxy.registerItemRenderer(Item.getItemFromBlock(this), 0, "inventory");
     }
 

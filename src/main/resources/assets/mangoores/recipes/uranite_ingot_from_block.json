@@ -1,15 +1,11 @@
 {
   "type": "minecraft:crafting_shapeless",
-
   "ingredients": [
-
     {
       "type": "forge:ore_dict",
       "ore": "blockUranite"
     }
-
   ],
-
   "result": {
     "item": "mangoores:uranite_ingot",
     "count": 9

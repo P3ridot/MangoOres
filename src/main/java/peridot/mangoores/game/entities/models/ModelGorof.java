@@ -40,7 +40,7 @@ public class ModelGorof extends ModelBase {
         this.lefthand = new ModelRenderer(this, 39, 12);
         this.lefthand.setRotationPoint(4F, 14.0F, 0.0F);
         this.lefthand.addBox(-0.5F, -1.0F, -1.0F, 2, 7, 2, 0.0F);
-        this.setRotateAngle(lefthand, 0.0F, 0.0F,-0.08726646259971647F);
+        this.setRotateAngle(lefthand, 0.0F, 0.0F, -0.08726646259971647F);
 
         this.rightleg = new ModelRenderer(this, 28, 8);
         this.rightleg.setRotationPoint(-3.0F, 20.0F, -1.0F);

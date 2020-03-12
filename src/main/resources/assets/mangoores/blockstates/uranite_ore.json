@@ -1,5 +1,7 @@
 {
   "variants": {
-    "normal": { "model": "mangoores:uranite_ore" }
+    "normal": {
+      "model": "mangoores:uranite_ore"
+    }
   }
 }

@@ -16,7 +16,7 @@ public class BlockBase extends Block implements IHasModel {
     public BlockBase(String name, Material material) {
         super(material);
 
-        setUnlocalizedName(Reference.MOD_ID+"."+name);
+        setUnlocalizedName(Reference.MOD_ID + "." + name);
         setRegistryName(name);
         setCreativeTab(ModCreativeTabs.CREATIVE_BLOCKS);
 
@@ -44,7 +44,7 @@ public class BlockBase extends Block implements IHasModel {
     }
 
     @Override
-    public void registerModels(){
+    public void registerModels() {
         MangoOres.proxy.registerItemRenderer(Item.getItemFromBlock(this), 0, "inventory");
     }
 }

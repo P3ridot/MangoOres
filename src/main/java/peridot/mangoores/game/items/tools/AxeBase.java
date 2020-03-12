@@ -9,10 +9,10 @@ import peridot.mangoores.util.Reference;
 
 public class AxeBase extends ItemHoe implements IHasModel {
 
-    public AxeBase(String name, ToolMaterial material){
+    public AxeBase(String name, ToolMaterial material) {
         super(material);
 
-        setUnlocalizedName(Reference.MOD_ID+"."+name);
+        setUnlocalizedName(Reference.MOD_ID + "." + name);
         setRegistryName(name);
         setCreativeTab(ModCreativeTabs.CREATIVE_TOOLS);
 

@@ -1,5 +1,7 @@
 {
   "variants": {
-    "normal": { "model": "mangoores:chair_with_benis"}
+    "normal": {
+      "model": "mangoores:chair_with_benis"
+    }
   }
 }
