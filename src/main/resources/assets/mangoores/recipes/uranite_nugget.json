@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+
+  "ingredients": [
+
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotUranite"
+    }
+
+  ],
+
+  "result": {
+    "item": "mangoores:uranite_nugget",
+    "count": 9
+  }
+}

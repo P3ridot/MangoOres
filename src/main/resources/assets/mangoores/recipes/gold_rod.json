@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+
+  "pattern": [
+    "G",
+    "G",
+    "G"
+  ],
+
+  "key": {
+    "G": {
+      "type": "forge:ore_dict",
+      "ore": "ingotGold"
+    }
+  },
+
+  "result": {
+    "item": "mangoores:gold_rod",
+    "count": 1
+  }
+}

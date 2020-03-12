@@ -1,0 +1,77 @@
+#Items
+item.mangoores.marker.name=Marker
+
+item.mangoores.iron_rod.name=Iron Rod
+item.mangoores.gold_rod.name=Gold Rod
+
+#Items - Metals - Ingot
+item.mangoores.mangonium_ingot.name=Mangonium Ingot
+item.mangoores.vibranium_ingot.name=Vibranium Ingot
+item.mangoores.uranite_ingot.name=Uranite Ingot
+
+#Items - Metals - Nugget
+item.mangoores.mangonium_nugget.name=Mangonium Nugget
+item.mangoores.vibranium_nugget.name=Vibranium Nugget
+item.mangoores.uranite_nugget.name=Uranite Nugget
+
+#Items - Gems
+item.mangoores.amber_gem.name=Amber Gem
+item.mangoores.amethyst_gem.name=Amethyst Gem
+item.mangoores.aquamarine_gem.name=Aquamarine Gem
+item.mangoores.galaxite_gem.name=Galaxite Gem
+item.mangoores.kyanite_gem.name=Kyanite Gem
+item.mangoores.peridot_gem.name=Peridot Gem
+item.mangoores.ruby_gem.name=Ruby Gem
+item.mangoores.sapphire_gem.name=Sapphire Gem
+item.mangoores.tanzanite_gem.name=Tanzanite Gem
+item.mangoores.topaz_gem.name=Topaz Gem
+item.mangoores.vulcanite_gem.name=Vulcanite Gem
+
+#Items - Food
+item.mangoores.fruit_mango.name=Mango
+item.mangoores.vegetable_cucurbit.name=Cucurbit
+
+#Items - Tools
+item.mangoores.mangowrench.name=Mango Wrench
+
+#Items - Armors
+item.mangoores.mangonium_helmet.name=Mangonium Helmet
+item.mangoores.mangonium_chestplate.name=Mangonium Chestplate
+item.mangoores.mangonium_leggings.name=Mangonium Leggings
+item.mangoores.mangonium_boots.name=Mangonium Boots
+
+#Blocks - Basic
+tile.mangoores.meteorite_block.name=Meteorite Block
+tile.mangoores.mud_block.name=Mud Block
+
+#Blocks - Metals - Ores
+tile.mangoores.mangonium_ore.name=Mangonium Ore
+tile.mangoores.vibranium_ore.name=Vibranium Ore
+tile.mangoores.uranite_ore.name=Uranite Ore
+
+#Blocks - Gems - Ores
+tile.mangoores.amber_ore.name=Amber Ore
+tile.mangoores.amethyst_ore.name=Amethyst Ore
+tile.mangoores.aquamarine_ore.name=Aquamarine Ore
+tile.mangoores.kyanite_ore.name=Kyanite Ore
+tile.mangoores.malachite_ore.name=Malachite Ore
+tile.mangoores.peridot_ore.name=Peridot Ore
+tile.mangoores.ruby_ore.name=Ruby Ore
+tile.mangoores.sapphire_ore.name=Sapphire Ore
+tile.mangoores.tanzanite_ore.name=Tanzanite Ore
+tile.mangoores.topaz_ore.name=Topaz Ore
+
+#Blocks - Metals - Blocks
+tile.mangoores.mangonium_block.name=Block of Mangonium
+tile.mangoores.vibranium_block.name=Block of Vibranium
+tile.mangoores.uranite_block.name=Block of Uranite
+
+#Blocks - Food
+tile.mangoores.polish_cream_cake_block.name=Polish Cream Cake Block
+
+#Creative Tabs
+itemGroup.mangoores.creative_blocks=MangoOres: Blocks
+itemGroup.mangoores.creative_items=MangoOres: Items
+itemGroup.mangoores.creative_food=MangoOres: Food
+itemGroup.mangoores.creative_tools=MangoOres: Tools
+itemGroup.mangoores.creative_armors=MangoOres: Armors

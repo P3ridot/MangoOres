@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+
+  "pattern": [
+    "M M",
+    "MFM",
+    "MFM"
+  ],
+
+  "key": {
+    "M": {
+      "type": "forge:ore_dict",
+      "ore": "ingotMangonium"
+    },
+    "F": {
+      "item": "mangoores:fruit_mango",
+      "data": 0
+    }
+  },
+
+  "result": {
+    "item": "mangoores:mangonium_chestplate",
+    "count": 1
+  }
+}

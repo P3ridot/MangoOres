@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "mangoores:blocks/metals/vibranium_block"
+  }
+}
