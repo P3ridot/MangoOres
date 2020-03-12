@@ -74,6 +74,8 @@ public class ModelGorof extends ModelBase {
 
         this.head.rotateAngleY = netHeadYaw * 0.017453292F;
         this.head.rotateAngleX = headPitch * 0.017453292F;
+
+        this.righthand.rotateAngleZ = (ageInTicks) / 1000.0F * (180F / (float)Math.PI);
     }
 
     public void postRenderArm(float scale, EnumHandSide side) {

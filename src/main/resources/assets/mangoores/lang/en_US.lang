@@ -75,3 +75,6 @@ itemGroup.mangoores.creative_items=MangoOres: Items
 itemGroup.mangoores.creative_food=MangoOres: Food
 itemGroup.mangoores.creative_tools=MangoOres: Tools
 itemGroup.mangoores.creative_armors=MangoOres: Armors
+
+#Entities
+entity.gorof.name=Gorof
