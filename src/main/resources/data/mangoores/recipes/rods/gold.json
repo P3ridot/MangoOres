@@ -1,0 +1,16 @@
+{
+  "result": {
+    "item": "mangoores:gold_rod"
+  },
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "*",
+    "*",
+    "*"
+  ],
+  "key": {
+    "*": {
+      "tag": "forge:ingots/gold"
+    }
+  }
+}

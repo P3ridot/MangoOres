@@ -1,7 +1,7 @@
 {
   "variants": {
-    "normal": {
-      "model": "mangoores:vibranium_ore"
+    "": {
+      "model": "mangoores:block/vibranium_ore"
     }
   }
 }

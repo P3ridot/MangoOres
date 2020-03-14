@@ -1,0 +1,12 @@
+{
+  "result": {
+    "item": "mangoores:mangonium_ingot",
+    "count": 9
+  },
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "mangoores:mangonium_block"
+    }
+  ]
+}
