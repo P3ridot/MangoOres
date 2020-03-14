@@ -8,5 +8,6 @@ public class ModItemGroups {
     public static final ItemGroup ITEMS = new ItemGroupItems();
     public static final ItemGroup ARMORS = new ItemGroupArmors();
     public static final ItemGroup TOOLS = new ItemGroupTools();
+    public static final ItemGroup FOOD = new ItemGroupFood();
 
 }

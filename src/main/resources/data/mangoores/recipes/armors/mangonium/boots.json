@@ -1,0 +1,15 @@
+{
+  "result": {
+    "item": "mangoores:mangonium_boots"
+  },
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "* *",
+    "* *"
+  ],
+  "key": {
+    "*": {
+      "tag": "forge:ingots/mangonium"
+    }
+  }
+}

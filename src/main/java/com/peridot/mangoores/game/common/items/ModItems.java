@@ -7,6 +7,7 @@ import com.peridot.mangoores.game.common.items.base.ItemArmorBase;
 import com.peridot.mangoores.game.common.items.base.ItemBase;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.BlockItem;
+import net.minecraft.item.Food;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
@@ -58,6 +59,9 @@ public class ModItems {
     //ITEMS - TOOLS
     public static final Item MANGO_WRENCH = new ItemBase(ModItemGroups.TOOLS);
 
+    //ITEMS - FOOD
+    public static final Item FRUIT_MANGO = new ItemBase(ModItemGroups.FOOD, new Food.Builder().hunger(3).saturation(3).build());
+
     public static final Map<String, BlockItem> BLOCKS_TO_REGISTER = new LinkedHashMap<>();
 
     public static void registerAll(RegistryEvent.Register<Item> event) {
@@ -94,6 +98,8 @@ public class ModItems {
         register("mangonium_boots", MANGONIUM_BOOTS);
 
         register("mango_wrench", MANGO_WRENCH);
+
+        register("fruit_mango", FRUIT_MANGO);
     }
 
     private static <T extends Item> T register(String name, T item) {
