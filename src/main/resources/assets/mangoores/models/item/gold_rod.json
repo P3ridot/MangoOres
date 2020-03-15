@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "mangoores:items/other/gold_rod"
+    "layer0": "mangoores:item/other/gold_rod"
   }
 }

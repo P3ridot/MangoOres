@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "mangoores:blocks/basic/mud_block"
+    "all": "mangoores:block/basic/mud_block"
   }
 }

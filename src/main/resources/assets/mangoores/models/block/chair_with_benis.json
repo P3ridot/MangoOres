@@ -1,10 +1,10 @@
 {
   "credit": "Made with Blockbench",
   "textures": {
-    "0": "minecraft:blocks/iron_block",
-    "1": "minecraft:blocks/planks_oak",
-    "2": "minecraft:blocks/wool_colored_pink",
-    "particle": "minecraft:blocks/iron_block"
+    "0": "minecraft:block/iron_block",
+    "1": "minecraft:block/planks_oak",
+    "2": "minecraft:block/wool_colored_pink",
+    "particle": "minecraft:block/iron_block"
   },
   "elements": [
     {

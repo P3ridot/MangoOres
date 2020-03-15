@@ -1,7 +1,6 @@
 package com.peridot.mangoores.game.common.blocks;
 
 import com.peridot.mangoores.MangoOres;
-import com.peridot.mangoores.game.common.blocks.base.BlockBase;
 import com.peridot.mangoores.game.common.blocks.custom.MudBlockBase;
 import com.peridot.mangoores.game.common.itemgroups.ModItemGroups;
 import com.peridot.mangoores.game.common.items.ModItems;
@@ -25,30 +24,30 @@ public class ModBlocks {
 
     //BLOCKS - METALS - ORES
     public static Block MANGONIUM_ORE;
-    public static Block VIBRANIUM_ORE;
     public static Block URANITE_ORE;
+    public static Block VIBRANIUM_ORE;
 
     //BLOCKS - METALS - BLOCKS
     public static Block MANGONIUM_BLOCK;
-    public static Block VIBRANIUM_BLOCK;
     public static Block URANITE_BLOCK;
+    public static Block VIBRANIUM_BLOCK;
 
     //BLOCKS - FOOD
     public static Block POLISH_CREAM_CAKE_BLOCK;
 
     public static void registerAll(RegistryEvent.Register<Block> event) {
         MUD_BLOCK = register("mud_block", new MudBlockBase(Material.CLAY, 0.6F, 0.6F, ToolType.SHOVEL, 0, SoundType.GROUND));
-        METEORITE_BLOCK = register("meteorite_block", new BlockBase(Material.ROCK, 50F, 6000F, ToolType.PICKAXE, 3, SoundType.STONE));
+        METEORITE_BLOCK = register("meteorite_block", new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(50F, 1200F).harvestTool(ToolType.PICKAXE).harvestLevel(3).sound(SoundType.METAL)));
 
-        MANGONIUM_ORE = register("mangonium_ore", new BlockBase(Material.ROCK, 4F, 40F, ToolType.PICKAXE, 3, SoundType.STONE));
-        VIBRANIUM_ORE = register("vibranium_ore", new BlockBase(Material.ROCK, 45, 600F, ToolType.PICKAXE, 3, SoundType.STONE));
-        URANITE_ORE = register("uranite_ore", new BlockBase(Material.ROCK, 5F, 6000F, ToolType.PICKAXE, 3, SoundType.STONE));
+        MANGONIUM_ORE = register("mangonium_ore", new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(6F, 9F).harvestTool(ToolType.PICKAXE).harvestLevel(3).sound(SoundType.METAL)));
+        URANITE_ORE = register("uranite_ore", new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(6F, 9F).harvestTool(ToolType.PICKAXE).harvestLevel(3).sound(SoundType.METAL)));
+        VIBRANIUM_ORE = register("vibranium_ore", new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(6F, 9F).harvestTool(ToolType.PICKAXE).harvestLevel(3).sound(SoundType.METAL)));
 
-        MANGONIUM_BLOCK = register("mangonium_block", new BlockBase(Material.ROCK, 4F, 40F, ToolType.PICKAXE, 3, SoundType.STONE));
-        VIBRANIUM_BLOCK = register("vibranium_block", new BlockBase(Material.ROCK, 45, 600F, ToolType.PICKAXE, 3, SoundType.STONE));
-        URANITE_BLOCK = register("uranite_block", new BlockBase(Material.ROCK, 5F, 6000F, ToolType.PICKAXE, 3, SoundType.STONE));
+        MANGONIUM_BLOCK = register("mangonium_block", new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(5F, 6F).harvestTool(ToolType.PICKAXE).harvestLevel(3).sound(SoundType.METAL)));
+        URANITE_BLOCK = register("uranite_block", new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(5F, 6F).harvestTool(ToolType.PICKAXE).harvestLevel(3).sound(SoundType.METAL)));
+        VIBRANIUM_BLOCK = register("vibranium_block", new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(50F, 1200F).harvestTool(ToolType.PICKAXE).harvestLevel(3).sound(SoundType.METAL)));
 
-        POLISH_CREAM_CAKE_BLOCK = register("polish_cream_cake_block", new BlockBase(Material.CAKE, 0.5F, 0.5F, SoundType.CLOTH));
+        POLISH_CREAM_CAKE_BLOCK = register("polish_cream_cake_block", new Block(Block.Properties.create(Material.CAKE).hardnessAndResistance(0.6F, 0.6F).sound(SoundType.CLOTH)));
     }
 
     private static <T extends Block> T register(String name, T block) {

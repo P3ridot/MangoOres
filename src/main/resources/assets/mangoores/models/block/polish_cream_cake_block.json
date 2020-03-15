@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "particle": "mangoores:blocks/foods/polish_cream_cake_side",
-    "down": "mangoores:blocks/foods/polish_cream_cake_bottom",
-    "up": "mangoores:blocks/foods/polish_cream_cake_top",
-    "north": "mangoores:blocks/foods/polish_cream_cake_side",
-    "east": "mangoores:blocks/foods/polish_cream_cake_side",
-    "south": "mangoores:blocks/foods/polish_cream_cake_side",
-    "west": "mangoores:blocks/foods/polish_cream_cake_side"
+    "particle": "mangoores:block/food/polish_cream_cake_side",
+    "down": "mangoores:block/food/polish_cream_cake_bottom",
+    "up": "mangoores:block/food/polish_cream_cake_top",
+    "north": "mangoores:block/food/polish_cream_cake_side",
+    "east": "mangoores:block/food/polish_cream_cake_side",
+    "south": "mangoores:block/food/polish_cream_cake_side",
+    "west": "mangoores:block/food/polish_cream_cake_side"
   }
 }

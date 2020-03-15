@@ -1,7 +1,6 @@
 package com.peridot.mangoores.game.common.items;
 
 import com.peridot.mangoores.MangoOres;
-import com.peridot.mangoores.game.common.items.ModItems;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IArmorMaterial;
 import net.minecraft.item.Item;
@@ -9,7 +8,7 @@ import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 
-public enum  ArmourMaterialList implements IArmorMaterial {
+public enum ArmourMaterialList implements IArmorMaterial {
 
     MANGONIUM("mangonium", 50, new int[]{4, 7, 9, 4}, 15, ModItems.MANGONIUM_INGOT, "item.armor.equip_iron", 3.0F);
 
@@ -36,7 +35,7 @@ public enum  ArmourMaterialList implements IArmorMaterial {
     }
 
     public int getDurability(EquipmentSlotType slot) {
-        return  max_damage_array[slot.getIndex()] * this.durability;
+        return max_damage_array[slot.getIndex()] * this.durability;
     }
 
     public int getEnchantability() {

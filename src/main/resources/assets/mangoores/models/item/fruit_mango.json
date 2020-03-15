@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "mangoores:items/foods/fruit_mango"
+    "layer0": "mangoores:item/food/fruit_mango"
   },
   "display": {
     "thirdperson_righthand": {

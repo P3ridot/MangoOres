@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "mangoores:items/metals/vibranium_ingot"
+    "layer0": "mangoores:item/metals/vibranium_ingot"
   }
 }

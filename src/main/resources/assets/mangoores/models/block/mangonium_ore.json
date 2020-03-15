@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "mangoores:blocks/metals/mangonium_ore"
+    "all": "mangoores:block/metals/mangonium_ore"
   }
 }

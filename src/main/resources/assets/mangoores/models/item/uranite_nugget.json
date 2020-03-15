@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "mangoores:items/metals/uranite_nugget"
+    "layer0": "mangoores:item/metals/uranite_nugget"
   }
 }

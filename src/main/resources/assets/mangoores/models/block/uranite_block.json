@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "mangoores:blocks/metals/uranite_block"
+    "all": "mangoores:block/metals/uranite_block"
   }
 }
