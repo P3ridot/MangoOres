@@ -10,6 +10,7 @@ public class RenderRegistry {
 
     public static void registerEntityRenders() {
         RenderingRegistry.registerEntityRenderingHandler(ModEntities.gorof_entity, GorofEntityRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(ModEntities.minion_entity, MinionEntityRender::new);
     }
 
 }

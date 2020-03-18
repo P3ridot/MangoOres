@@ -2,7 +2,7 @@ package com.peridot.mangoores.game.common.entities;
 
 import com.peridot.mangoores.MangoOres;
 import com.peridot.mangoores.game.common.entities.entities.GorofEntity;
-import com.peridot.mangoores.game.common.items.ModItems;
+import com.peridot.mangoores.game.common.entities.entities.MinionEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
@@ -13,12 +13,18 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.registries.ForgeRegistries;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ModEntities {
 
-    public static EntityType<GorofEntity> gorof_entity = register("gorof", EntityType.Builder.<GorofEntity>create(GorofEntity::new, EntityClassification.CREATURE).size(0.5F, 1.2F));
+    public static final List<EntityType<?>> entities = new ArrayList<>();
 
-    public static void registerAll(final RegistryEvent.Register<Item> event) {
-        ModItems.GOROF_ENTITY_EGG = registerEntitySpawnEgg(gorof_entity, 0xe34444, 0xa52b2b, "gorof_spawn_egg");
+    public static EntityType<GorofEntity> gorof_entity = register("gorof", EntityType.Builder.<GorofEntity>create(GorofEntity::new, EntityClassification.CREATURE).size(0.5F, 1.2F));
+    public static EntityType<MinionEntity> minion_entity = register("minion", EntityType.Builder.<MinionEntity>create(MinionEntity::new, EntityClassification.CREATURE).size(0.5F, 1.2F));
+
+    public static void registerEntities(RegistryEvent.Register<EntityType<?>> event) {
+        entities.forEach(entity -> event.getRegistry().register(entity));
     }
 
     public static Item registerEntitySpawnEgg(EntityType<?> type, int color1, int color2, String name) {
@@ -32,8 +38,8 @@ public class ModEntities {
     private static <T extends Entity> EntityType<T> register(String name, EntityType.Builder<T> entity) {
         ResourceLocation id = MangoOres.getId(name);
         EntityType<T> entityType = entity.build(MangoOres.MOD_ID + ":" + name);
-        entityType.setRegistryName(MangoOres.getId(name));
-        ForgeRegistries.ENTITIES.register(entityType);
+        entityType.setRegistryName(id);
+        entities.add(entityType);
         return entityType;
     }
 

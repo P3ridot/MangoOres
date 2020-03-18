@@ -5,6 +5,7 @@ import com.peridot.mangoores.game.common.blocks.ModBlocks;
 import com.peridot.mangoores.game.common.entities.ModEntities;
 import com.peridot.mangoores.game.common.items.ModItems;
 import net.minecraft.block.Block;
+import net.minecraft.entity.EntityType;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -18,9 +19,9 @@ public class SideProxy {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(SideProxy::commonSetup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(SideProxy::enqueueIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(SideProxy::processIMC);
-        FMLJavaModLoadingContext.get().getModEventBus().addGenericListener(Block.class, ModBlocks::registerAll);
-        FMLJavaModLoadingContext.get().getModEventBus().addGenericListener(Item.class, ModItems::registerAll);
-        FMLJavaModLoadingContext.get().getModEventBus().addGenericListener(Item.class, ModEntities::registerAll);
+        FMLJavaModLoadingContext.get().getModEventBus().addGenericListener(EntityType.class, ModEntities::registerEntities);
+        FMLJavaModLoadingContext.get().getModEventBus().addGenericListener(Block.class, ModBlocks::registerBlocks);
+        FMLJavaModLoadingContext.get().getModEventBus().addGenericListener(Item.class, ModItems::registerItems);
 
         MinecraftForge.EVENT_BUS.register(this);
     }
@@ -30,9 +31,11 @@ public class SideProxy {
     }
 
     private static void enqueueIMC(final InterModEnqueueEvent event) {
+
     }
 
     private static void processIMC(final InterModProcessEvent event) {
+
     }
 
     @SubscribeEvent

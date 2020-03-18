@@ -4,6 +4,7 @@ import com.peridot.mangoores.MangoOres;
 import com.peridot.mangoores.game.common.blocks.ModBlocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.NonNullList;
 
 public class ItemGroupBlocks extends ItemGroup {
 
@@ -14,5 +15,11 @@ public class ItemGroupBlocks extends ItemGroup {
     @Override
     public ItemStack createIcon() {
         return new ItemStack(ModBlocks.MANGONIUM_BLOCK);
+    }
+
+    @Override
+    public void fill(NonNullList<ItemStack> items) {
+        super.fill(items);
+        items.sort(ModItemGroups.tabSorterBlocks);
     }
 }

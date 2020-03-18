@@ -1,8 +1,14 @@
 package com.peridot.mangoores.game.common.itemgroups;
 
 import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
+
+import java.util.Comparator;
 
 public class ModItemGroups {
+
+    public static Comparator<ItemStack> tabSorterItems;
+    public static Comparator<ItemStack> tabSorterBlocks;
 
     public static final ItemGroup BLOCKS = new ItemGroupBlocks();
     public static final ItemGroup ITEMS = new ItemGroupItems();

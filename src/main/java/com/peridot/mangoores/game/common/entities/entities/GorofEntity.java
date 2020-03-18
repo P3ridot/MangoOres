@@ -2,7 +2,6 @@ package com.peridot.mangoores.game.common.entities.entities;
 
 import com.peridot.mangoores.MangoOres;
 import com.peridot.mangoores.game.common.entities.ModEntities;
-import net.minecraft.block.Blocks;
 import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -10,8 +9,6 @@ import net.minecraft.entity.ai.goal.LookAtWithoutMovingGoal;
 import net.minecraft.entity.ai.goal.RandomWalkingGoal;
 import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 
@@ -39,16 +36,6 @@ public class GorofEntity extends CreatureEntity {
         super.registerAttributes();
         this.getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(20.0D);
         this.getAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.3D);
-    }
-
-    @Override
-    public ItemStack getHeldItemMainhand() {
-        return new ItemStack(Blocks.ACACIA_LEAVES);
-    }
-
-    @Override
-    public ItemStack getHeldItemOffhand() {
-        return new ItemStack(Items.GOLDEN_SWORD);
     }
 
     public ResourceLocation getTexture() {
