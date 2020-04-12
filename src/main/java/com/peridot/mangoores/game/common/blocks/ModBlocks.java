@@ -5,6 +5,7 @@ import com.peridot.mangoores.game.common.blocks.custom.MudBlockBase;
 import com.peridot.mangoores.game.common.itemgroups.ModItemGroups;
 import com.peridot.mangoores.game.common.items.ModItems;
 import net.minecraft.block.Block;
+import net.minecraft.block.FallingBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
@@ -38,6 +39,19 @@ public class ModBlocks {
     public static Block MANGONIUM_BLOCK = register("mangonium_block", new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(5F, 6F).harvestTool(ToolType.PICKAXE).harvestLevel(3).sound(SoundType.METAL)));
     public static Block URANITE_BLOCK = register("uranite_block", new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(5F, 6F).harvestTool(ToolType.PICKAXE).harvestLevel(4).sound(SoundType.METAL)));
     public static Block VIBRANIUM_BLOCK = register("vibranium_block", new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(50F, 1200F).harvestTool(ToolType.PICKAXE).harvestLevel(5).sound(SoundType.METAL)));
+
+    //BLOCKS - GEMS - ORES
+    public static Block AMBER_ORE = register("amber_ore", new FallingBlock(Block.Properties.create(Material.SAND).hardnessAndResistance(3F, 3F).harvestTool(ToolType.SHOVEL).harvestLevel(2).sound(SoundType.SAND)));
+    public static Block AMETHYST_ORE = register("amethyst_ore", new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3F, 3F).harvestTool(ToolType.PICKAXE).harvestLevel(3)));
+    public static Block AQUAMARINE_ORE = register("aquamarine_ore", new FallingBlock(Block.Properties.create(Material.SAND).hardnessAndResistance(3F, 3F).harvestTool(ToolType.SHOVEL).harvestLevel(2).sound(SoundType.SAND)));
+    public static Block GALAXITE_ORE = register("galaxite_ore", new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3F, 3F).harvestTool(ToolType.PICKAXE).harvestLevel(4)));
+    public static Block KYANITE_ORE = register("kyanite_ore", new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3F, 3F).harvestTool(ToolType.PICKAXE).harvestLevel(2)));
+    public static Block PERIDOT_ORE = register("peridot_ore", new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3F, 3F).harvestTool(ToolType.PICKAXE).harvestLevel(2)));
+    public static Block RUBY_ORE = register("ruby_ore", new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3F, 3F).harvestTool(ToolType.PICKAXE).harvestLevel(2)));
+    public static Block SAPPHIRE_ORE = register("sapphire_ore", new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3F, 3F).harvestTool(ToolType.PICKAXE).harvestLevel(2)));
+    public static Block TANZANITE_ORE = register("tanzanite_ore", new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3F, 3F).harvestTool(ToolType.PICKAXE).harvestLevel(2)));
+    public static Block TOPAZ_ORE = register("topaz_ore", new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3F, 3F).harvestTool(ToolType.PICKAXE).harvestLevel(2)));
+    public static Block VULCANITE_ORE = register("vulcanite_ore", new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3F, 3F).harvestTool(ToolType.PICKAXE).harvestLevel(4)));
 
     //BLOCKS - GEMS - BLOCKS
     public static Block AMBER_BLOCK = register("amber_block", new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(5F, 6F).harvestTool(ToolType.PICKAXE).harvestLevel(2)));

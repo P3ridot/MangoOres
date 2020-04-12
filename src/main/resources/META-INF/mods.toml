@@ -7,6 +7,6 @@ version="${file.jarVersion}"
 displayName="MangoOres"
 displayURL="https://github.com/P3ridot/MangoOres" #optional
 logoFile="logo.png"
-credits="Thanks for piotreee who gave idea of Polish Cream Cake and Arek who created textures of Vibranium Items <3"
+credits="Thanks for: piotreee, Arek and WBGroup <3"
 authors="Peridot and Czerwonek"
 description='''Mod  which add new very cool items, blocks, mobs and more!'''

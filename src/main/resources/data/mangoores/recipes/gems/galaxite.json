@@ -1,0 +1,12 @@
+{
+  "result": {
+    "item": "mangoores:galaxite_gem",
+    "count": 9
+  },
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "mangoores:galaxite_block"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "result": {
+    "item": "mangoores:tanzanite_gem",
+    "count": 9
+  },
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "mangoores:tanzanite_block"
+    }
+  ]
+}

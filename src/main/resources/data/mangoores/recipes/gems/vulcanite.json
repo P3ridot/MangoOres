@@ -1,0 +1,12 @@
+{
+  "result": {
+    "item": "mangoores:vulcanite_gem",
+    "count": 9
+  },
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "mangoores:vulcanite_block"
+    }
+  ]
+}
