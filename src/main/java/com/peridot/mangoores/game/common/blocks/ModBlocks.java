@@ -30,14 +30,27 @@ public class ModBlocks {
     public static Block METEORITE_BLOCK = register("meteorite_block", new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(50F, 1200F).harvestTool(ToolType.PICKAXE).harvestLevel(3).sound(SoundType.METAL)));
 
     //BLOCKS - METALS - ORES
-    public static Block MANGONIUM_ORE = register("mangonium_ore", new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(6F, 9F).harvestTool(ToolType.PICKAXE).harvestLevel(3).sound(SoundType.METAL)));
-    public static Block URANITE_ORE = register("uranite_ore", new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(6F, 9F).harvestTool(ToolType.PICKAXE).harvestLevel(4).sound(SoundType.METAL)));
-    public static Block VIBRANIUM_ORE = register("vibranium_ore", new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(6F, 9F).harvestTool(ToolType.PICKAXE).harvestLevel(5).sound(SoundType.METAL)));
+    public static Block MANGONIUM_ORE = register("mangonium_ore", new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(6F, 9F).harvestTool(ToolType.PICKAXE).harvestLevel(3)));
+    public static Block URANITE_ORE = register("uranite_ore", new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(6F, 9F).harvestTool(ToolType.PICKAXE).harvestLevel(4)));
+    public static Block VIBRANIUM_ORE = register("vibranium_ore", new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(6F, 9F).harvestTool(ToolType.PICKAXE).harvestLevel(5)));
 
     //BLOCKS - METALS - BLOCKS
-    public static Block MANGONIUM_BLOCK = register("mangonium_block", new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(5F, 6F).harvestTool(ToolType.PICKAXE).harvestLevel(3).sound(SoundType.METAL)));
-    public static Block URANITE_BLOCK = register("uranite_block", new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(5F, 6F).harvestTool(ToolType.PICKAXE).harvestLevel(3).sound(SoundType.METAL)));
-    public static Block VIBRANIUM_BLOCK = register("vibranium_block", new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(50F, 1200F).harvestTool(ToolType.PICKAXE).harvestLevel(3).sound(SoundType.METAL)));
+    public static Block MANGONIUM_BLOCK = register("mangonium_block", new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(5F, 6F).harvestTool(ToolType.PICKAXE).harvestLevel(3).sound(SoundType.METAL)));
+    public static Block URANITE_BLOCK = register("uranite_block", new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(5F, 6F).harvestTool(ToolType.PICKAXE).harvestLevel(4).sound(SoundType.METAL)));
+    public static Block VIBRANIUM_BLOCK = register("vibranium_block", new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(50F, 1200F).harvestTool(ToolType.PICKAXE).harvestLevel(5).sound(SoundType.METAL)));
+
+    //BLOCKS - GEMS - BLOCKS
+    public static Block AMBER_BLOCK = register("amber_block", new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(5F, 6F).harvestTool(ToolType.PICKAXE).harvestLevel(2)));
+    public static Block AMETHYST_BLOCK = register("amethyst_block", new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(5F, 6F).harvestTool(ToolType.PICKAXE).harvestLevel(3)));
+    public static Block AQUAMARINE_BLOCK = register("aquamarine_block", new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(5F, 6F).harvestTool(ToolType.PICKAXE).harvestLevel(2)));
+    public static Block GALAXITE_BLOCK = register("galaxite_block", new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(5F, 6F).harvestTool(ToolType.PICKAXE).harvestLevel(4)));
+    public static Block KYANITE_BLOCK = register("kyanite_block", new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(5F, 6F).harvestTool(ToolType.PICKAXE).harvestLevel(3)));
+    public static Block PERIDOT_BLOCK = register("peridot_block", new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(5F, 6F).harvestTool(ToolType.PICKAXE).harvestLevel(2)));
+    public static Block RUBY_BLOCK = register("ruby_block", new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(5F, 6F).harvestTool(ToolType.PICKAXE).harvestLevel(2)));
+    public static Block SAPPHIRE_BLOCK = register("sapphire_block", new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(5F, 6F).harvestTool(ToolType.PICKAXE).harvestLevel(2)));
+    public static Block TANZANITE_BLOCK = register("tanzanite_block", new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(5F, 6F).harvestTool(ToolType.PICKAXE).harvestLevel(2)));
+    public static Block TOPAZ_BLOCK = register("topaz_block", new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(5F, 6F).harvestTool(ToolType.PICKAXE).harvestLevel(2)));
+    public static Block VULCANITE_BLOCK = register("vulcanite_block", new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(5F, 6F).harvestTool(ToolType.PICKAXE).harvestLevel(4)));
 
     //BLOCKS - FOOD
     public static Block POLISH_CREAM_CAKE_BLOCK = register("polish_cream_cake_block", new Block(Block.Properties.create(Material.CAKE).hardnessAndResistance(0.6F, 0.6F).sound(SoundType.CLOTH)));
