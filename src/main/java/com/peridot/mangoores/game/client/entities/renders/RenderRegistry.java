@@ -9,8 +9,8 @@ import net.minecraftforge.fml.client.registry.RenderingRegistry;
 public class RenderRegistry {
 
     public static void registerEntityRenders() {
-        RenderingRegistry.registerEntityRenderingHandler(ModEntities.gorof_entity, GorofEntityRender::new);
-        RenderingRegistry.registerEntityRenderingHandler(ModEntities.minion_entity, MinionEntityRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(ModEntities.GOROF_ENTITY, GorofEntityRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(ModEntities.MINION_ENTITY, MinionEntityRender::new);
     }
 
 }

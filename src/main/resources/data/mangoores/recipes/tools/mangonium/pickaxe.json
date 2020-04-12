@@ -1,0 +1,19 @@
+{
+  "result": {
+    "item": "mangoores:mangonium_pickaxe"
+  },
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "MMM",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "M": {
+      "tag": "forge:ingots/mangonium"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  }
+}

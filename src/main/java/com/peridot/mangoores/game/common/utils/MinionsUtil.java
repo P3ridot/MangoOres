@@ -2,7 +2,6 @@ package com.peridot.mangoores.game.common.utils;
 
 import com.mojang.authlib.GameProfile;
 import com.mojang.authlib.minecraft.MinecraftProfileTexture;
-import com.peridot.mangoores.MangoOres;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.DefaultPlayerSkin;
 import net.minecraft.util.ResourceLocation;
@@ -15,7 +14,7 @@ public class MinionsUtil {
     private static final Map<String, ResourceLocation> skinLocationsMap = new HashMap<>();
     private static final Map<String, Boolean> slimSkinMap = new HashMap<>();
 
-    private static final List<String> skinOwners = Collections.unmodifiableList(Arrays.asList("Perid0t_", "Kruliczek", "Hekutoki", "Libter", "BrixNW", "Etoo_", "xAxee", "darlingvylence", "HaskellV", "JanekJaran", "C2H6Cd", "Kurotsuwa", "Kamilkime", "zrdzn9", "viummi", "m__k", "Xevis_", "IgniteDEV"));
+    private static final List<String> skinOwners = Collections.unmodifiableList(Arrays.asList("Perid0t_", "Kruliczek", "Hekutoki", "Libter", "BrixNW", "Etoo_", "xAxee", "__funnyvalentine", "HaskellV", "JanekJaran", "C2H6Cd", "Kurotsuwa", "Kamilkime", "zrdzn9", "viummi", "m__k", "Xevis_", "IgniteDEV"));
 
     public static ResourceLocation getSkinResourceLocation(String nickName) {
         GameProfile gameProfile = null;

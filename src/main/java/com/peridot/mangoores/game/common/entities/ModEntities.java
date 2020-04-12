@@ -20,8 +20,8 @@ public class ModEntities {
 
     public static final List<EntityType<?>> entities = new ArrayList<>();
 
-    public static EntityType<GorofEntity> gorof_entity = register("gorof", EntityType.Builder.<GorofEntity>create(GorofEntity::new, EntityClassification.CREATURE).size(0.5F, 1.2F));
-    public static EntityType<MinionEntity> minion_entity = register("minion", EntityType.Builder.<MinionEntity>create(MinionEntity::new, EntityClassification.CREATURE).size(0.5F, 1.2F));
+    public static EntityType<GorofEntity> GOROF_ENTITY = register("gorof", EntityType.Builder.<GorofEntity>create(GorofEntity::new, EntityClassification.CREATURE).size(0.5F, 1.2F));
+    public static EntityType<MinionEntity> MINION_ENTITY = register("minion", EntityType.Builder.<MinionEntity>create(MinionEntity::new, EntityClassification.CREATURE).size(0.5F, 1.2F));
 
     public static void registerEntities(RegistryEvent.Register<EntityType<?>> event) {
         entities.forEach(entity -> event.getRegistry().register(entity));

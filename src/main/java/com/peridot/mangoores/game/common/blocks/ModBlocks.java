@@ -23,14 +23,16 @@ public class ModBlocks {
 
     public static final List<Block> blocks = new ArrayList<>();
 
+    public static Block CHUNK_OBSERVER = register("chunk_observer", new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(3.5F, 3.5F).sound(SoundType.ANVIL).lightValue(8).func_226896_b_()));
+
     //BLOCKS - BASIC
-    public static Block MUD_BLOCK = register("mud_block", new MudBlockBase(Material.CLAY, 0.6F, 0.6F, ToolType.SHOVEL, 0, SoundType.GROUND));
+    public static Block MUD_BLOCK = register("mud_block", new MudBlockBase(Block.Properties.create(Material.CLAY).hardnessAndResistance(0.6F, 0.6F).harvestTool(ToolType.SHOVEL).harvestLevel(0).sound(SoundType.GROUND)));
     public static Block METEORITE_BLOCK = register("meteorite_block", new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(50F, 1200F).harvestTool(ToolType.PICKAXE).harvestLevel(3).sound(SoundType.METAL)));
 
     //BLOCKS - METALS - ORES
     public static Block MANGONIUM_ORE = register("mangonium_ore", new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(6F, 9F).harvestTool(ToolType.PICKAXE).harvestLevel(3).sound(SoundType.METAL)));
-    public static Block URANITE_ORE = register("uranite_ore", new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(6F, 9F).harvestTool(ToolType.PICKAXE).harvestLevel(3).sound(SoundType.METAL)));
-    public static Block VIBRANIUM_ORE = register("vibranium_ore", new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(6F, 9F).harvestTool(ToolType.PICKAXE).harvestLevel(3).sound(SoundType.METAL)));
+    public static Block URANITE_ORE = register("uranite_ore", new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(6F, 9F).harvestTool(ToolType.PICKAXE).harvestLevel(4).sound(SoundType.METAL)));
+    public static Block VIBRANIUM_ORE = register("vibranium_ore", new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(6F, 9F).harvestTool(ToolType.PICKAXE).harvestLevel(5).sound(SoundType.METAL)));
 
     //BLOCKS - METALS - BLOCKS
     public static Block MANGONIUM_BLOCK = register("mangonium_block", new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(5F, 6F).harvestTool(ToolType.PICKAXE).harvestLevel(3).sound(SoundType.METAL)));

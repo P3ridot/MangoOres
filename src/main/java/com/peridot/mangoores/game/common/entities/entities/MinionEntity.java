@@ -2,7 +2,6 @@ package com.peridot.mangoores.game.common.entities.entities;
 
 import com.peridot.mangoores.game.common.entities.ModEntities;
 import com.peridot.mangoores.game.common.utils.MinionsUtil;
-import net.minecraft.client.renderer.entity.EntityRendererManager;
 import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -10,9 +9,6 @@ import net.minecraft.entity.ai.goal.LookAtWithoutMovingGoal;
 import net.minecraft.entity.ai.goal.RandomWalkingGoal;
 import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.network.datasync.DataParameter;
 import net.minecraft.network.datasync.DataSerializers;
@@ -31,14 +27,14 @@ public class MinionEntity extends CreatureEntity {
 
     @SuppressWarnings("unchecked")
     public MinionEntity(EntityType<? extends CreatureEntity> type, World worldIn) {
-        super((EntityType<? extends CreatureEntity>) ModEntities.minion_entity, worldIn);
+        super((EntityType<? extends CreatureEntity>) ModEntities.MINION_ENTITY, worldIn);
 
         setSkinOwner(new StringTextComponent(MinionsUtil.getRandomSkinOwner()));
     }
 
     @SuppressWarnings("unchecked")
     public MinionEntity(World world) {
-        this((EntityType<? extends CreatureEntity>) ModEntities.minion_entity, world);
+        this((EntityType<? extends CreatureEntity>) ModEntities.MINION_ENTITY, world);
     }
 
     @Override

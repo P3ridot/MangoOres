@@ -1,0 +1,19 @@
+{
+  "result": {
+    "item": "mangoores:mangonium_shovel"
+  },
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "M",
+    "S",
+    "S"
+  ],
+  "key": {
+    "M": {
+      "tag": "forge:ingots/mangonium"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  }
+}

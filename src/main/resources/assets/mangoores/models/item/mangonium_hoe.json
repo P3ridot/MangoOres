@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "mangoores:item/tools/mango_wrench"
+    "layer0": "mangoores:item/tools/mangonium_hoe"
   }
 }

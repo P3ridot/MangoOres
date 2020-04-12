@@ -16,12 +16,12 @@ public class GorofEntity extends CreatureEntity {
 
     @SuppressWarnings("unchecked")
     public GorofEntity(EntityType<? extends CreatureEntity> type, World worldIn) {
-        super((EntityType<? extends CreatureEntity>) ModEntities.gorof_entity, worldIn);
+        super((EntityType<? extends CreatureEntity>) ModEntities.GOROF_ENTITY, worldIn);
     }
 
     @SuppressWarnings("unchecked")
     public GorofEntity(World world) {
-        this((EntityType<? extends CreatureEntity>) ModEntities.gorof_entity, world);
+        this((EntityType<? extends CreatureEntity>) ModEntities.GOROF_ENTITY, world);
     }
 
     @Override

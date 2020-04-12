@@ -1,12 +1,12 @@
-modLoader="javafml" #mandatory
-loaderVersion="[31,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
-issueTrackerURL="https://github.com/P3ridot/MangoOres/issues" #optional
+modLoader="javafml"
+loaderVersion="[31,)"
+issueTrackerURL="https://github.com/P3ridot/MangoOres/issues"
 [[mods]] #mandatory
-modId="mangoores" #mandatory
-version="${file.jarVersion}" #mandatory
-displayName="MangoOres" #mandatory
+modId="mangoores"
+version="${file.jarVersion}"
+displayName="MangoOres"
 displayURL="https://github.com/P3ridot/MangoOres" #optional
-logoFile="logo.png" #optional
-credits="Thanks for piotreee who gave idea of Polish Cream Cake and Arek who created textures of Vibranium Items <3" #optional
-authors="Peridot and Czerwonek" #optional
+logoFile="logo.png"
+credits="Thanks for piotreee who gave idea of Polish Cream Cake and Arek who created textures of Vibranium Items <3"
+authors="Peridot and Czerwonek"
 description='''Mod  which add new very cool items, blocks, mobs and more!'''
