@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "mangoores:kyanite_ore"
+  },
+  "result": "mangoores:kyanite_gem",
+  "experience": 1.0,
+  "cookingtime": 100
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "mangoores:vulcanite_ore"
+  },
+  "result": "mangoores:vulcanite_gem",
+  "experience": 1.0,
+  "cookingtime": 200
+}

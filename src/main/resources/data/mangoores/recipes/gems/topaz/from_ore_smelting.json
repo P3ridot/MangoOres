@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "mangoores:topaz_ore"
+  },
+  "result": "mangoores:topaz_gem",
+  "experience": 1.0,
+  "cookingtime": 200
+}

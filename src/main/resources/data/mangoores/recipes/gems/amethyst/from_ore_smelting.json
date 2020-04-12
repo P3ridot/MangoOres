@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "mangoores:amethyst_ore"
+  },
+  "result": "mangoores:amethyst_gem",
+  "experience": 1.0,
+  "cookingtime": 200
+}

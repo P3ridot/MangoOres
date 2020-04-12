@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "mangoores:peridot_ore"
+  },
+  "result": "mangoores:peridot_gem",
+  "experience": 1.0,
+  "cookingtime": 100
+}

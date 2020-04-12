@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "mangoores:tanzanite_ore"
+  },
+  "result": "mangoores:tanzanite_gem",
+  "experience": 1.0,
+  "cookingtime": 100
+}

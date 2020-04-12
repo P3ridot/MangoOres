@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "mangoores:aquamarine_ore"
+  },
+  "result": "mangoores:aquamarine_gem",
+  "experience": 1.0,
+  "cookingtime": 200
+}
