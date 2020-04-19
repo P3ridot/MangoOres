@@ -44,10 +44,8 @@ public class RenderPlayer {
                     if (clientPlayer.hasPlayerInfo()) {
                         NetworkPlayerInfo info = ObfuscationReflectionHelper.getPrivateValue(AbstractClientPlayerEntity.class, clientPlayer, "playerInfo");
                         Map<MinecraftProfileTexture.Type, ResourceLocation> textures = ObfuscationReflectionHelper.getPrivateValue(NetworkPlayerInfo.class, info, "playerTextures");
-                        if (capesMap.get(player.getUniqueID()) != null) {
-                            textures.put(MinecraftProfileTexture.Type.CAPE, capesMap.get(player.getUniqueID()));
-                            textures.put(MinecraftProfileTexture.Type.ELYTRA, capesMap.get(player.getUniqueID()));
-                        }
+                        textures.put(MinecraftProfileTexture.Type.CAPE, capesMap.get(player.getUniqueID()));
+                        textures.put(MinecraftProfileTexture.Type.ELYTRA, capesMap.get(player.getUniqueID()));
                         capesDone.add(player);
                     }
                 }
