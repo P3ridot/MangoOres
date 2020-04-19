@@ -30,34 +30,34 @@ public class GorofEntityModel extends SegmentedModel<GorofEntity> implements IHa
 
         this.stick = new ModelRenderer(this, 29, 18);
         this.stick.setRotationPoint(1.0F, -5.0F, 1.0F);
-        this.stick.func_228301_a_(-0.5F, 0.0F, -0.5F, 1F, 2F, 1F, 0.0F);
+        this.stick.addBox(-0.5F, 0.0F, -0.5F, 1F, 2F, 1F, 0.0F);
 
         this.head = new ModelRenderer(this, 0, 0);
         this.head.setRotationPoint(0.0F, 8.0F, 0.0F);
-        this.head.func_228301_a_(-3.0F, -3.0F, -3.0F, 6F, 6F, 6F, 0.0F);
+        this.head.addBox(-3.0F, -3.0F, -3.0F, 6F, 6F, 6F, 0.0F);
         this.head.addChild(this.stick);
 
         this.body = new ModelRenderer(this, 0, 17);
         this.body.setRotationPoint(-0.5F, 11.0F, -3.0F);
-        this.body.func_228301_a_(-3.0F, 0.0F, 0.0F, 7F, 9F, 6F, 0.0F);
+        this.body.addBox(-3.0F, 0.0F, 0.0F, 7F, 9F, 6F, 0.0F);
 
         this.rightarm = new ModelRenderer(this, 39, 1);
         this.rightarm.setRotationPoint(-4F, 14.0F, 0.0F);
-        this.rightarm.func_228301_a_(-1.5F, -1.0F, -1.0F, 2F, 7F, 2F, 0.0F);
+        this.rightarm.addBox(-1.5F, -1.0F, -1.0F, 2F, 7F, 2F, 0.0F);
         this.setRotateAngle(rightarm, 0.0F, 0.0F, 0.08726646259971647F);
 
         this.leftarm = new ModelRenderer(this, 39, 12);
         this.leftarm.setRotationPoint(4F, 14.0F, 0.0F);
-        this.leftarm.func_228301_a_(-0.5F, -1.0F, -1.0F, 2F, 7F, 2F, 0.0F);
+        this.leftarm.addBox(-0.5F, -1.0F, -1.0F, 2F, 7F, 2F, 0.0F);
         this.setRotateAngle(leftarm, 0.0F, 0.0F, -0.08726646259971647F);
 
         this.rightleg = new ModelRenderer(this, 28, 8);
         this.rightleg.setRotationPoint(-3.0F, 20.0F, -1.0F);
-        this.rightleg.func_228301_a_(0.0F, 0.0F, 0.0F, 2F, 4F, 2F, 0.0F);
+        this.rightleg.addBox(0.0F, 0.0F, 0.0F, 2F, 4F, 2F, 0.0F);
 
         this.leftleg = new ModelRenderer(this, 28, 1);
         this.leftleg.setRotationPoint(1.0F, 20.0F, -1.0F);
-        this.leftleg.func_228301_a_(0.0F, 0.0F, 0.0F, 2F, 4F, 2F, 0.0F);
+        this.leftleg.addBox(0.0F, 0.0F, 0.0F, 2F, 4F, 2F, 0.0F);
 
         this.parts = ImmutableList.of(this.head, this.body, this.leftarm, this.rightarm, this.leftleg, this.rightleg);
     }
@@ -69,7 +69,7 @@ public class GorofEntityModel extends SegmentedModel<GorofEntity> implements IHa
     }
 
     @Override
-    public void func_225597_a_(GorofEntity gorofEntity, float limbSwing, float limbSwingAmount, float ageInTicks, float headYaw, float headPitch) {
+    public void setRotationAngles(GorofEntity gorofEntity, float limbSwing, float limbSwingAmount, float ageInTicks, float headYaw, float headPitch) {
         this.leftleg.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
         this.rightleg.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F + (float) Math.PI) * 1.4F * limbSwingAmount;
 
@@ -82,28 +82,28 @@ public class GorofEntityModel extends SegmentedModel<GorofEntity> implements IHa
 
 
     @Override
-    public Iterable<ModelRenderer> func_225601_a_() {
+    public Iterable<ModelRenderer> getParts() {
         return this.parts;
     }
 
     @Override
-    public void func_225599_a_(HandSide handSide, MatrixStack matrixStack) {
+    public void translateHand(HandSide handSide, MatrixStack matrixStack) {
         switch (handSide) {
             case LEFT:
-                this.leftarm.func_228307_a_(matrixStack);
-                matrixStack.func_227861_a_(0.0, -0.1, 0.0);
-                matrixStack.func_227862_a_(0.75F, 0.75F, 0.75F);
+                this.leftarm.translateRotate(matrixStack);
+                matrixStack.translate(0.0, -0.1, 0.0);
+                matrixStack.scale(0.75F, 0.75F, 0.75F);
                 break;
             case RIGHT:
-                this.rightarm.func_228307_a_(matrixStack);
-                matrixStack.func_227861_a_(0.0, -0.1, 0.0);
-                matrixStack.func_227862_a_(0.75F, 0.75F, 0.75F);
+                this.rightarm.translateRotate(matrixStack);
+                matrixStack.translate(0.0, -0.1, 0.0);
+                matrixStack.scale(0.75F, 0.75F, 0.75F);
                 break;
         }
     }
 
     @Override
-    public ModelRenderer func_205072_a() {
+    public ModelRenderer getModelHead() {
         return this.head;
     }
 }

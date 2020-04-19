@@ -29,7 +29,7 @@ public class MudBlockBase extends FallingBlock {
     @Override
     public void onEntityWalk(World world, BlockPos pos, Entity entity) {
         double d0 = Math.abs(entity.getMotion().y);
-        if (d0 < 0.1D && !entity.func_226271_bk_()) {
+        if (d0 < 0.1D && !entity.isSteppingCarefully()) {
             double d1 = 0.4D + d0 * 0.4D;
             entity.setMotion(entity.getMotion().mul(d1, 1.0D, d1));
         }

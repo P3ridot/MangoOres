@@ -29,7 +29,7 @@ public class MinionsUtil {
             Minecraft.getInstance().getSessionService().fillProfileProperties(gameProfile, false);
             Map<MinecraftProfileTexture.Type, MinecraftProfileTexture> map = Minecraft.getInstance().getSkinManager().loadSkinFromCache(gameProfile);
 
-            resourceLocation = map != null && map.containsKey(MinecraftProfileTexture.Type.SKIN) ? Minecraft.getInstance().getSkinManager().loadSkin(map.get(MinecraftProfileTexture.Type.SKIN), MinecraftProfileTexture.Type.SKIN) : DefaultPlayerSkin.getDefaultSkinLegacy();
+            resourceLocation = map.containsKey(MinecraftProfileTexture.Type.SKIN) ? Minecraft.getInstance().getSkinManager().loadSkin(map.get(MinecraftProfileTexture.Type.SKIN), MinecraftProfileTexture.Type.SKIN) : DefaultPlayerSkin.getDefaultSkinLegacy();
             slimSkinMap.put(nickName, map.get(MinecraftProfileTexture.Type.SKIN).getMetadata("model") == "slim");
             skinLocationsMap.put(nickName, resourceLocation);
         }

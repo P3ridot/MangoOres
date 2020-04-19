@@ -19,13 +19,8 @@ public class ModItems {
     public static final List<BlockItem> blocks = new ArrayList<>();
 
     //ITEMS
-    public static Item MARKER = register("marker", new Item(new Item.Properties().group(ModItemGroups.ITEMS)));
-    ;
-
     public static Item IRON_ROD = register("iron_rod", new Item(new Item.Properties().group(ModItemGroups.ITEMS)));
-    ;
     public static Item GOLD_ROD = register("gold_rod", new Item(new Item.Properties().group(ModItemGroups.ITEMS)));
-    ;
 
     //ITEMS - METALS - INGOTS
     public static Item MANGONIUM_INGOT = register("mangonium_ingot", new Item(new Item.Properties().group(ModItemGroups.ITEMS)));
