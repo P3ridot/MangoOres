@@ -7,8 +7,7 @@ import java.util.Comparator;
 
 public class ModItemGroups {
 
-    public static Comparator<ItemStack> tabSorterItems;
-    public static Comparator<ItemStack> tabSorterBlocks;
+    public static Comparator<ItemStack> tabSorter;
 
     public static final ItemGroup BLOCKS = new ItemGroupBlocks();
     public static final ItemGroup ITEMS = new ItemGroupItems();

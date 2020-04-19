@@ -4,6 +4,7 @@ import com.peridot.mangoores.game.client.entities.renders.RenderRegistry;
 import com.peridot.mangoores.game.common.blocks.ModBlocks;
 import com.peridot.mangoores.game.common.entities.ModEntities;
 import com.peridot.mangoores.game.common.items.ModItems;
+import com.peridot.mangoores.game.common.utils.PlayerOrnamentUtil;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.Item;
@@ -19,11 +20,12 @@ public class SideProxy {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(SideProxy::commonSetup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(SideProxy::enqueueIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(SideProxy::processIMC);
-        FMLJavaModLoadingContext.get().getModEventBus().addGenericListener(EntityType.class, ModEntities::registerEntities);
         FMLJavaModLoadingContext.get().getModEventBus().addGenericListener(Block.class, ModBlocks::registerBlocks);
         FMLJavaModLoadingContext.get().getModEventBus().addGenericListener(Item.class, ModItems::registerItems);
+        FMLJavaModLoadingContext.get().getModEventBus().addGenericListener(EntityType.class, ModEntities::registerEntities);
 
         MinecraftForge.EVENT_BUS.register(this);
+
     }
 
     private static void commonSetup(FMLCommonSetupEvent event) {
@@ -40,7 +42,9 @@ public class SideProxy {
 
     @SubscribeEvent
     public void serverStarting(FMLServerStartingEvent event) {
-
+        PlayerOrnamentUtil playerOrnamentUtil = new PlayerOrnamentUtil();
+        playerOrnamentUtil.registerCapes();
+        playerOrnamentUtil.registerOverheadItems();
     }
 
     static class Client extends SideProxy {

@@ -20,6 +20,6 @@ public class ItemGroupFood extends ItemGroup {
     @Override
     public void fill(NonNullList<ItemStack> items) {
         super.fill(items);
-        items.sort(ModItemGroups.tabSorterItems);
+        items.sort(ModItemGroups.tabSorter);
     }
 }

@@ -20,6 +20,6 @@ public class ItemGroupBlocks extends ItemGroup {
     @Override
     public void fill(NonNullList<ItemStack> items) {
         super.fill(items);
-        items.sort(ModItemGroups.tabSorterBlocks);
+        items.sort(ModItemGroups.tabSorter);
     }
 }
