@@ -1,4 +1,4 @@
-package com.peridot.mangoores.game.client.entities.renders;
+package com.peridot.mangoores.game.client.entities.renders.renders;
 
 import com.peridot.mangoores.game.client.entities.models.GorofEntityModel;
 import com.peridot.mangoores.game.common.entities.entities.GorofEntity;
@@ -14,9 +14,8 @@ import net.minecraftforge.fml.client.registry.IRenderFactory;
 @OnlyIn(Dist.CLIENT)
 public class GorofEntityRender extends MobRenderer<GorofEntity, GorofEntityModel> {
 
-
     public GorofEntityRender(EntityRendererManager entityRendererManager) {
-        super(entityRendererManager, new GorofEntityModel(), 0.0F);
+        super(entityRendererManager, new GorofEntityModel(), 0.4F);
         this.addLayer(new HeldItemLayer<>(this));
     }
 
@@ -26,10 +25,12 @@ public class GorofEntityRender extends MobRenderer<GorofEntity, GorofEntityModel
     }
 
     public static class RenderFactory implements IRenderFactory<GorofEntity> {
+
         @Override
         public EntityRenderer<? super GorofEntity> createRenderFor(EntityRendererManager manager) {
             return new GorofEntityRender(manager);
         }
+
     }
 
 }

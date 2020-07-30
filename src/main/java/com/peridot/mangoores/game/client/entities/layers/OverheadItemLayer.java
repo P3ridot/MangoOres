@@ -3,13 +3,13 @@ package com.peridot.mangoores.game.client.entities.layers;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.IRenderTypeBuffer;
-import net.minecraft.client.renderer.Vector3f;
 import net.minecraft.client.renderer.entity.IEntityRenderer;
 import net.minecraft.client.renderer.entity.layers.LayerRenderer;
 import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.client.renderer.model.ItemCameraTransforms;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.math.vector.Vector3f;
 
 public class OverheadItemLayer<T extends PlayerEntity, M extends BipedModel<T>> extends LayerRenderer<T, M> {
 
@@ -26,10 +26,13 @@ public class OverheadItemLayer<T extends PlayerEntity, M extends BipedModel<T>> 
             matrixStack.push();
             matrixStack.translate(0F, entity.getHeight() - 2.8F, 0F);
             matrixStack.scale(0.45F, 0.45F, 0.45F);
+
             matrixStack.rotate(Vector3f.XP.rotationDegrees(180.0F));
             matrixStack.rotate(Vector3f.YP.rotationDegrees((v3) / 20.0F * (180F / (float) Math.PI)));
+
             Minecraft.getInstance().getFirstPersonRenderer().renderItemSide(entity, item, ItemCameraTransforms.TransformType.FIXED, false, matrixStack, iRenderTypeBuffer, i);
             matrixStack.pop();
         }
     }
+
 }

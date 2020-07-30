@@ -13,13 +13,15 @@ public enum ArmourMaterialList implements IArmorMaterial {
     MANGONIUM("mangonium", 50, new int[]{4, 7, 9, 4}, 15, ModItems.MANGONIUM_INGOT, "item.armor.equip_iron", 3.0F);
 
     private static final int[] max_damage_array = new int[]{13, 15, 16, 11};
-    private String name, equipSound;
-    private int durability, enchantability;
-    private Item repairMaterial;
-    private int[] damageReductionAmounts;
-    private float toughness;
+    private final String name;
+    private final String equipSound;
+    private final int durability;
+    private final int enchantability;
+    private final Item repairMaterial;
+    private final int[] damageReductionAmounts;
+    private final float toughness;
 
-    private ArmourMaterialList(String name, int durability, int[] damageReductionAmounts, int enchantability, Item repairMaterial, String equipSound, float toughness) {
+    ArmourMaterialList(String name, int durability, int[] damageReductionAmounts, int enchantability, Item repairMaterial, String equipSound, float toughness) {
         this.name = name;
         this.durability = durability;
         this.damageReductionAmounts = damageReductionAmounts;
@@ -59,5 +61,10 @@ public enum ArmourMaterialList implements IArmorMaterial {
     @Override
     public float getToughness() {
         return toughness;
+    }
+
+    @Override
+    public float func_230304_f_() {
+        return 0;
     }
 }

@@ -17,10 +17,9 @@ public class MinionEntityModel extends PlayerModel<MinionEntity> {
     }
 
     @Override
-    public void setRotationAngles(MinionEntity minionEntity, float limbSwing, float limbSwingAmount, float ageInTicks, float headYaw, float headPitch) {
+    public void setRotationAngles(MinionEntity entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
         this.isChild = true;
-        super.setRotationAngles(minionEntity, limbSwing, limbSwingAmount, ageInTicks, headYaw, headPitch);
+        super.setRotationAngles(entityIn, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
     }
-
 
 }

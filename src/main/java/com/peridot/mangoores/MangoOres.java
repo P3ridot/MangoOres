@@ -43,4 +43,5 @@ public class MangoOres {
     public static ResourceLocation getId(String path) {
         return new ResourceLocation(MOD_ID, path);
     }
+
 }

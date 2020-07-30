@@ -62,6 +62,16 @@ public class GorofEntityModel extends SegmentedModel<GorofEntity> implements IHa
         this.parts = ImmutableList.of(this.head, this.body, this.leftarm, this.rightarm, this.leftleg, this.rightleg);
     }
 
+    @Override
+    public Iterable<ModelRenderer> getParts() {
+        return this.parts;
+    }
+
+    @Override
+    public ModelRenderer getModelHead() {
+        return this.head;
+    }
+
     private void setRotateAngle(ModelRenderer modelRenderer, float x, float y, float z) {
         modelRenderer.rotateAngleX = x;
         modelRenderer.rotateAngleY = y;
@@ -69,21 +79,15 @@ public class GorofEntityModel extends SegmentedModel<GorofEntity> implements IHa
     }
 
     @Override
-    public void setRotationAngles(GorofEntity gorofEntity, float limbSwing, float limbSwingAmount, float ageInTicks, float headYaw, float headPitch) {
+    public void setRotationAngles(GorofEntity entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
         this.leftleg.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
         this.rightleg.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F + (float) Math.PI) * 1.4F * limbSwingAmount;
 
-        this.head.rotateAngleY = headYaw * 0.017453292F;
+        this.head.rotateAngleY = netHeadYaw * 0.017453292F;
         this.head.rotateAngleX = headPitch * 0.017453292F;
 
         this.leftarm.rotateAngleZ = -(MathHelper.cos(ageInTicks * 0.09F) * 0.05F + 0.05F);
         this.rightarm.rotateAngleZ = MathHelper.cos(ageInTicks * 0.09F) * 0.05F + 0.05F;
-    }
-
-
-    @Override
-    public Iterable<ModelRenderer> getParts() {
-        return this.parts;
     }
 
     @Override
@@ -102,8 +106,4 @@ public class GorofEntityModel extends SegmentedModel<GorofEntity> implements IHa
         }
     }
 
-    @Override
-    public ModelRenderer getModelHead() {
-        return this.head;
-    }
 }

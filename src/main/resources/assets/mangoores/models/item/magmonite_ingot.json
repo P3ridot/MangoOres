@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "mangoores:item/metals/magmonite_ingot"
+  }
+}

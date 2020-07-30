@@ -22,4 +22,5 @@ public class ItemGroupFood extends ItemGroup {
         super.fill(items);
         items.sort(ModItemGroups.tabSorter);
     }
+
 }

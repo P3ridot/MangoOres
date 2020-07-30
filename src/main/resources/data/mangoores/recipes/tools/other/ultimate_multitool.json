@@ -1,0 +1,28 @@
+{
+  "result": {
+    "item": "mangoores:ultimate_multitool"
+  },
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "VDN",
+    " RD",
+    "E V"
+  ],
+  "key": {
+    "N": {
+      "item": "minecraft:nether_star"
+    },
+    "E": {
+      "item": "minecraft:ender_eye"
+    },
+    "D": {
+      "tag": "forge:gems/diamond"
+    },
+    "R": {
+      "tag": "forge:rods/iron"
+    },
+    "V": {
+      "tag": "forge:nuggets/vibranium"
+    }
+  }
+}

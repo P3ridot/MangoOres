@@ -1,0 +1,28 @@
+{
+  "result": {
+    "item": "mangoores:inactive_lightning_sword"
+  },
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " GK",
+    "RNG",
+    "BR "
+  ],
+  "key": {
+    "N": {
+      "item": "minecraft:nether_star"
+    },
+    "B": {
+      "tag": "forge:rods/blaze"
+    },
+    "R": {
+      "tag": "forge:gems/ruby"
+    },
+    "K": {
+      "tag": "forge:gems/kyanite"
+    },
+    "G": {
+      "tag": "forge:nuggets/gold"
+    }
+  }
+}

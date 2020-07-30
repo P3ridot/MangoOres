@@ -3,6 +3,7 @@ package com.peridot.mangoores.game.common.entities;
 import com.peridot.mangoores.MangoOres;
 import com.peridot.mangoores.game.common.entities.entities.GorofEntity;
 import com.peridot.mangoores.game.common.entities.entities.MinionEntity;
+import com.peridot.mangoores.game.common.entities.entities.ScorpionEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
@@ -20,8 +21,9 @@ public class ModEntities {
 
     public static final List<EntityType<?>> entities = new ArrayList<>();
 
-    public static EntityType<GorofEntity> GOROF_ENTITY = register("gorof", EntityType.Builder.<GorofEntity>create(GorofEntity::new, EntityClassification.CREATURE).size(0.5F, 1.2F));
-    public static EntityType<MinionEntity> MINION_ENTITY = register("minion", EntityType.Builder.<MinionEntity>create(MinionEntity::new, EntityClassification.CREATURE).size(0.5F, 1.2F));
+    public static EntityType<GorofEntity> GOROF_ENTITY = register("gorof", EntityType.Builder.create(GorofEntity::new, EntityClassification.CREATURE).size(0.5F, 1.2F));
+    public static EntityType<MinionEntity> MINION_ENTITY = register("minion", EntityType.Builder.create(MinionEntity::new, EntityClassification.CREATURE).size(0.5F, 1.2F));
+    public static EntityType<ScorpionEntity> SCORPION_ENTITY = register("scorpion", EntityType.Builder.create(ScorpionEntity::new, EntityClassification.CREATURE).size(1.4F, 1.2F));
 
     public static void registerEntities(RegistryEvent.Register<EntityType<?>> event) {
         entities.forEach(entity -> event.getRegistry().register(entity));

@@ -4,6 +4,9 @@ import com.google.common.collect.Ordering;
 import com.peridot.mangoores.MangoOres;
 import com.peridot.mangoores.game.common.entities.ModEntities;
 import com.peridot.mangoores.game.common.itemgroups.ModItemGroups;
+import com.peridot.mangoores.game.common.items.custom.tools.InactiveLightningSwordItem;
+import com.peridot.mangoores.game.common.items.custom.tools.LightningSwordItem;
+import com.peridot.mangoores.game.common.items.custom.tools.MultitoolItem;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraft.util.ResourceLocation;
@@ -22,14 +25,16 @@ public class ModItems {
     public static final Item GOLD_ROD = register("gold_rod", new Item(new Item.Properties().group(ModItemGroups.ITEMS)));
 
     //ITEMS - METALS - INGOTS
+    public static final Item MAGMONITE_INGOT = register("magmonite_ingot", new Item(new Item.Properties().group(ModItemGroups.ITEMS)));
     public static final Item MANGONIUM_INGOT = register("mangonium_ingot", new Item(new Item.Properties().group(ModItemGroups.ITEMS)));
     public static final Item URANITE_INGOT = register("uranite_ingot", new Item(new Item.Properties().group(ModItemGroups.ITEMS)));
     public static final Item VIBRANIUM_INGOT = register("vibranium_ingot", new Item(new Item.Properties().group(ModItemGroups.ITEMS)));
 
     //ITEMS - METALS - NUGGETS
-    public static final Item MANGONIUM_NUGGE = register("mangonium_nugget", new Item(new Item.Properties().group(ModItemGroups.ITEMS)));
-    public static final Item URANITE_NUGGET = register("vibranium_nugget", new Item(new Item.Properties().group(ModItemGroups.ITEMS)));
-    public static final Item VIBRANIUM_NUGGET = register("uranite_nugget", new Item(new Item.Properties().group(ModItemGroups.ITEMS)));
+    public static final Item MAGMONITE_NUGGET = register("magmonite_nugget", new Item(new Item.Properties().group(ModItemGroups.ITEMS)));
+    public static final Item MANGONIUM_NUGGET = register("mangonium_nugget", new Item(new Item.Properties().group(ModItemGroups.ITEMS)));
+    public static final Item URANITE_NUGGET = register("uranite_nugget", new Item(new Item.Properties().group(ModItemGroups.ITEMS)));
+    public static final Item VIBRANIUM_NUGGET = register("vibranium_nugget", new Item(new Item.Properties().group(ModItemGroups.ITEMS)));
 
     //ITEMS - GEMS
     public static final Item AMBER_GEM = register("amber_gem", new Item(new Item.Properties().group(ModItemGroups.ITEMS)));
@@ -56,7 +61,11 @@ public class ModItems {
     public static final Item MANGONIUM_SHOVEL = register("mangonium_shovel", new ShovelItem(ToolMaterialList.MANGONIUM, 1.5F, -3.0F, new Item.Properties().group(ModItemGroups.TOOLS)));
     public static final Item MANGONIUM_PICKAXE = register("mangonium_pickaxe", new PickaxeItem(ToolMaterialList.MANGONIUM, 2, -2.8F, new Item.Properties().group(ModItemGroups.TOOLS)));
     public static final Item MANGONIUM_AXE = register("mangonium_axe", new AxeItem(ToolMaterialList.MANGONIUM, 5.5F, -3.0F, new Item.Properties().group(ModItemGroups.TOOLS)));
-    public static final Item MANGONIUM_HOE = register("mangonium_hoe", new HoeItem(ToolMaterialList.MANGONIUM, 0.0F, new Item.Properties().group(ModItemGroups.TOOLS)));
+    public static final Item MANGONIUM_HOE = register("mangonium_hoe", new HoeItem(ToolMaterialList.MANGONIUM, 2, 0.0F, new Item.Properties().group(ModItemGroups.TOOLS)));
+    public static final Item ULTIMATE_MULTITOOL = register("ultimate_multitool", new MultitoolItem(ToolMaterialList.ULTIMATE_MULTITOOL, 2, -2.8F, new Item.Properties().group(ModItemGroups.TOOLS)));
+
+    public static final Item INACTIVE_LIGHTING_SWORD = register("inactive_lightning_sword", new InactiveLightningSwordItem(ToolMaterialList.INACTIVE_LIGHTING_SWORD, 3, -2.4F, new Item.Properties().group(ModItemGroups.TOOLS)));
+    public static final Item LIGHTING_SWORD = register("lightning_sword", new LightningSwordItem(ToolMaterialList.LIGHTING_SWORD, 4, -2.4F, new Item.Properties().group(ModItemGroups.TOOLS)));
 
     //ITEMS - FOOD
     public static final Item FRUIT_MANGO = register("fruit_mango", new Item(new Item.Properties().group(ModItemGroups.FOOD).food(new Food.Builder().hunger(3).saturation(3).build())));
@@ -64,6 +73,7 @@ public class ModItems {
     //ITEMS - SPAWN EGGS
     public static final Item GOROF_ENTITY_EGG = ModEntities.registerEntitySpawnEgg(ModEntities.GOROF_ENTITY, 0xe34444, 0xa52b2b, "gorof_spawn_egg");
     public static final Item MINION_ENTITY_EGG = ModEntities.registerEntitySpawnEgg(ModEntities.MINION_ENTITY, 0x463aa5, 0x00afaf, "minion_spawn_egg");
+    public static final Item SCORPION_ENTITY_EGG = ModEntities.registerEntitySpawnEgg(ModEntities.SCORPION_ENTITY, 0x000000, 0xc800fa, "scorpion_spawn_egg");
 
     public static void registerItems(RegistryEvent.Register<Item> event) {
         blocks.forEach(block -> event.getRegistry().register(block));

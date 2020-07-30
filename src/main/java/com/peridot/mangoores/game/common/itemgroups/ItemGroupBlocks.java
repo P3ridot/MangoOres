@@ -17,9 +17,11 @@ public class ItemGroupBlocks extends ItemGroup {
         return new ItemStack(ModBlocks.MANGONIUM_BLOCK);
     }
 
+
     @Override
     public void fill(NonNullList<ItemStack> items) {
         super.fill(items);
         items.sort(ModItemGroups.tabSorter);
     }
+
 }

@@ -1,4 +1,4 @@
-package com.peridot.mangoores.game.client.entities.renders;
+package com.peridot.mangoores.game.client.entities.renders.renders;
 
 import com.peridot.mangoores.game.client.entities.models.MinionEntityModel;
 import com.peridot.mangoores.game.common.entities.entities.MinionEntity;
@@ -14,7 +14,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 public class MinionEntityRender extends BipedRenderer<MinionEntity, BipedModel<MinionEntity>> {
 
     public MinionEntityRender(EntityRendererManager rendererManager) {
-        super(rendererManager, new MinionEntityModel(false), 0.5F);
+        super(rendererManager, new MinionEntityModel(false), 0.4F);
         this.addLayer(new BipedArmorLayer<>(this, new BipedModel(0.75F), new BipedModel(1.25F)));
     }
 
@@ -22,4 +22,5 @@ public class MinionEntityRender extends BipedRenderer<MinionEntity, BipedModel<M
     public ResourceLocation getEntityTexture(MinionEntity entity) {
         return entity.getTexture();
     }
+
 }

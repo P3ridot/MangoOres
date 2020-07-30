@@ -1,10 +1,11 @@
 package com.peridot.mangoores.game.common.entities.entities;
 
-import com.peridot.mangoores.game.common.entities.ModEntities;
 import com.peridot.mangoores.game.common.utils.MinionsUtil;
 import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.MobEntity;
+import net.minecraft.entity.ai.attributes.AttributeModifierMap;
+import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.LookAtWithoutMovingGoal;
 import net.minecraft.entity.ai.goal.RandomWalkingGoal;
 import net.minecraft.entity.ai.goal.SwimGoal;
@@ -16,7 +17,6 @@ import net.minecraft.network.datasync.EntityDataManager;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.text.event.ClickEvent;
 import net.minecraft.world.World;
 
 import java.util.Optional;
@@ -25,16 +25,17 @@ public class MinionEntity extends CreatureEntity {
 
     private static final DataParameter<Optional<ITextComponent>> SKIN_OWNER = EntityDataManager.createKey(MinionEntity.class, DataSerializers.OPTIONAL_TEXT_COMPONENT);
 
-    @SuppressWarnings("unchecked")
     public MinionEntity(EntityType<? extends CreatureEntity> type, World worldIn) {
-        super((EntityType<? extends CreatureEntity>) ModEntities.MINION_ENTITY, worldIn);
+        super(type, worldIn);
 
         setSkinOwner(new StringTextComponent(MinionsUtil.getRandomSkinOwner()));
     }
 
-    @SuppressWarnings("unchecked")
-    public MinionEntity(World world) {
-        this((EntityType<? extends CreatureEntity>) ModEntities.MINION_ENTITY, world);
+    public static AttributeModifierMap.MutableAttribute setCustomAttributes() {
+        return MobEntity.func_233666_p_()
+                .func_233815_a_(Attributes.field_233818_a_, 15D)
+                .func_233815_a_(Attributes.field_233821_d_, 0.3D)
+                .func_233815_a_(Attributes.field_233823_f_, 2D);
     }
 
     @Override
@@ -42,13 +43,6 @@ public class MinionEntity extends CreatureEntity {
         this.goalSelector.addGoal(0, new SwimGoal(this));
         this.goalSelector.addGoal(1, new RandomWalkingGoal(this, 1D));
         this.goalSelector.addGoal(2, new LookAtWithoutMovingGoal(this, PlayerEntity.class, 10F, 10F));
-    }
-
-    @Override
-    protected void registerAttributes() {
-        super.registerAttributes();
-        this.getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(20.0D);
-        this.getAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.3D);
     }
 
     @Override
@@ -62,14 +56,10 @@ public class MinionEntity extends CreatureEntity {
         return name;
     }
 
-    public ITextComponent getSkinOwner() {
-        try {
-            ITextComponent resultName = this.dataManager.get(SKIN_OWNER).orElse((ITextComponent) null).deepCopy();
-            removeClickEvents(resultName);
-            return resultName;
-        } catch (Exception ignored) {
-            return null;
-        }
+    private static void removeClickEvents(ITextComponent textComponent) {
+        /*textComponent.applyTextStyle((component) -> {
+            component.setClickEvent((ClickEvent) null);
+        }).getSiblings().forEach(MinionEntity::removeClickEvents);*/
     }
 
     @Override
@@ -92,14 +82,14 @@ public class MinionEntity extends CreatureEntity {
         return name;
     }
 
-    private static void removeClickEvents(ITextComponent textComponent) {
-        textComponent.applyTextStyle((component) -> {
-            component.setClickEvent((ClickEvent) null);
-        }).getSiblings().forEach(MinionEntity::removeClickEvents);
-    }
-
-    public boolean isSlimSkin() {
-        return MinionsUtil.isSlimSkin(getResultSkinOwner());
+    public ITextComponent getSkinOwner() {
+        try {
+            ITextComponent resultName = this.dataManager.get(SKIN_OWNER).orElse(null).func_230532_e_();
+            removeClickEvents(resultName);
+            return resultName;
+        } catch (Exception ignored) {
+            return null;
+        }
     }
 
     public String getResultSkinOwner() {
@@ -116,4 +106,5 @@ public class MinionEntity extends CreatureEntity {
     public ResourceLocation getTexture() {
         return MinionsUtil.getSkinResourceLocation(getResultSkinOwner());
     }
+
 }

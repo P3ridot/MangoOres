@@ -25,10 +25,10 @@ public class ModBlocks {
 
     public static final List<Block> blocks = new ArrayList<>();
 
-    public static final Block CHUNK_OBSERVER = register("chunk_observer", new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(3.5F, 3.5F).sound(SoundType.ANVIL).lightValue(8).notSolid()));
+    public static final Block CHUNK_OBSERVER = register("chunk_observer", new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(3.5F, 3.5F).sound(SoundType.ANVIL).notSolid()));
 
     //BLOCKS - BASIC
-    public static final Block MUD_BLOCK = register("mud_block", new MudBlockBase(Block.Properties.create(Material.CLAY).hardnessAndResistance(0.6F, 0.6F).harvestTool(ToolType.SHOVEL).harvestLevel(0).sound(SoundType.GROUND)));
+    public static final Block MUD_BLOCK = register("mud_block", new MudBlockBase(Block.Properties.create(Material.CLAY).speedFactor(0.4F).hardnessAndResistance(0.6F, 0.6F).harvestTool(ToolType.SHOVEL).harvestLevel(0).sound(SoundType.GROUND)));
     public static final Block METEORITE_BLOCK = register("meteorite_block", new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(50F, 1200F).harvestTool(ToolType.PICKAXE).harvestLevel(3).sound(SoundType.METAL)));
 
     //BLOCKS - METALS - ORES
@@ -37,6 +37,7 @@ public class ModBlocks {
     public static final Block VIBRANIUM_ORE = register("vibranium_ore", new OreBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(6F, 9F).harvestTool(ToolType.PICKAXE).harvestLevel(5)));
 
     //BLOCKS - METALS - BLOCKS
+    public static final Block MAGMONITE_BLOCK = register("magmonite_block", new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(50.0F, 1200.0F).harvestTool(ToolType.PICKAXE).harvestLevel(3).sound(SoundType.METAL)));
     public static final Block MANGONIUM_BLOCK = register("mangonium_block", new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(5F, 6F).harvestTool(ToolType.PICKAXE).harvestLevel(3).sound(SoundType.METAL)));
     public static final Block URANITE_BLOCK = register("uranite_block", new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(5F, 6F).harvestTool(ToolType.PICKAXE).harvestLevel(4).sound(SoundType.METAL)));
     public static final Block VIBRANIUM_BLOCK = register("vibranium_block", new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(50F, 1200F).harvestTool(ToolType.PICKAXE).harvestLevel(5).sound(SoundType.METAL)));
