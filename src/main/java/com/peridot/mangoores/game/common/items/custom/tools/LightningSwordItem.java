@@ -1,5 +1,6 @@
 package com.peridot.mangoores.game.common.items.custom.tools;
 
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.effect.LightningBoltEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -13,7 +14,16 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.RayTraceContext;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.math.vector.Vector3d;
+import net.minecraft.util.text.IFormattableTextComponent;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.TextFormatting;
+import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+
+import javax.annotation.Nullable;
+import java.util.List;
 
 public class LightningSwordItem extends SwordItem {
 
@@ -59,6 +69,16 @@ public class LightningSwordItem extends SwordItem {
             }
         }
         return super.onItemRightClick(world, player, hand);
+    }
+
+    @OnlyIn(Dist.CLIENT)
+    public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
+        tooltip.add(this.func_234801_g_().func_240699_a_(TextFormatting.GRAY));
+    }
+
+    @OnlyIn(Dist.CLIENT)
+    public IFormattableTextComponent func_234801_g_() {
+        return new TranslationTextComponent(this.getTranslationKey() + ".desc");
     }
 
 }

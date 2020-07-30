@@ -1,7 +1,9 @@
-package com.peridot.mangoores.game.events;
+package com.peridot.mangoores.game.events.server;
 
+import com.peridot.mangoores.MangoOres;
 import com.peridot.mangoores.game.common.items.ModItems;
 import com.peridot.mangoores.game.common.items.custom.tools.InactiveLightningSwordItem;
+import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.effect.LightningBoltEntity;
@@ -11,9 +13,12 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.Hand;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
+import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
 
+@Mod.EventBusSubscriber(modid = MangoOres.MOD_ID, value = Dist.DEDICATED_SERVER)
 public class LivingDeath {
 
     @SubscribeEvent
@@ -39,7 +44,11 @@ public class LivingDeath {
             return;
         }
 
-        player.setHeldItem(Hand.MAIN_HAND, new ItemStack(ModItems.LIGHTING_SWORD));
+        ItemStack newSword = new ItemStack(ModItems.LIGHTING_SWORD);
+
+        EnchantmentHelper.setEnchantments(EnchantmentHelper.getEnchantments(item), newSword);
+
+        player.setHeldItem(Hand.MAIN_HAND, newSword);
 
         World world = entity.getEntityWorld();
         if (world.isRemote) {

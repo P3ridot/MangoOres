@@ -8,7 +8,9 @@ import com.peridot.mangoores.game.common.entities.entities.MinionEntity;
 import com.peridot.mangoores.game.common.entities.entities.ScorpionEntity;
 import com.peridot.mangoores.game.common.items.ModItems;
 import com.peridot.mangoores.game.common.utils.PlayerOrnamentUtil;
-import com.peridot.mangoores.game.events.LivingDeath;
+import com.peridot.mangoores.game.events.client.RenderPlayer;
+import com.peridot.mangoores.game.events.server.LivingDeath;
+import com.peridot.mangoores.game.events.server.WorldTick;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
@@ -30,7 +32,9 @@ public class SideProxy {
         FMLJavaModLoadingContext.get().getModEventBus().addGenericListener(Item.class, ModItems::registerItems);
         FMLJavaModLoadingContext.get().getModEventBus().addGenericListener(EntityType.class, ModEntities::registerEntities);
 
-        MinecraftForge.EVENT_BUS.register(this);
+        MinecraftForge.EVENT_BUS.register(new RenderPlayer());
+
+        MinecraftForge.EVENT_BUS.register(new WorldTick());
         MinecraftForge.EVENT_BUS.register(new LivingDeath());
     }
 

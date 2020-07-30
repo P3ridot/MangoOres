@@ -1,4 +1,4 @@
-package com.peridot.mangoores.game.events;
+package com.peridot.mangoores.game.events.client;
 
 import com.mojang.authlib.minecraft.MinecraftProfileTexture;
 import com.peridot.mangoores.MangoOres;
@@ -19,14 +19,14 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-@Mod.EventBusSubscriber(modid = MangoOres.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.CLIENT)
+@Mod.EventBusSubscriber(modid = MangoOres.MOD_ID, value = Dist.CLIENT)
 public class RenderPlayer {
 
     private static final Set<PlayerEntity> capesDone = new HashSet<>();
     private static final Set<PlayerEntity> overheadItemsDone = new HashSet<>();
 
     @SubscribeEvent
-    public static void renderPlayer(RenderPlayerEvent event) {
+    public void renderPlayer(RenderPlayerEvent event) {
         PlayerEntity player = event.getPlayer();
         if (!capesDone.contains(player)) {
             ResourceLocation cape = PlayerOrnamentUtil.getCape(player.getUniqueID());
