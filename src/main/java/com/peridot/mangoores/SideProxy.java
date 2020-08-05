@@ -8,6 +8,9 @@ import com.peridot.mangoores.game.common.entities.entities.MinionEntity;
 import com.peridot.mangoores.game.common.entities.entities.ScorpionEntity;
 import com.peridot.mangoores.game.common.items.ModItems;
 import com.peridot.mangoores.game.common.utils.PlayerOrnamentUtil;
+import com.peridot.mangoores.game.common.world.generation.ores.NetherOreGeneration;
+import com.peridot.mangoores.game.common.world.generation.ores.NormalOreGeneration;
+import com.peridot.mangoores.game.common.world.generation.ores.SandOreGeneration;
 import com.peridot.mangoores.game.events.client.RenderPlayer;
 import com.peridot.mangoores.game.events.server.LivingDeath;
 import com.peridot.mangoores.game.events.server.WorldTick;
@@ -18,10 +21,12 @@ import net.minecraft.item.Item;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.DeferredWorkQueue;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.*;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
+@Mod.EventBusSubscriber(modid = MangoOres.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class SideProxy {
 
     SideProxy() {
@@ -59,6 +64,21 @@ public class SideProxy {
         PlayerOrnamentUtil playerOrnamentUtil = new PlayerOrnamentUtil();
         playerOrnamentUtil.registerCapes();
         playerOrnamentUtil.registerOverheadItems();
+    }
+
+    @SubscribeEvent
+    public static void loadCompleteEvent(FMLLoadCompleteEvent event) {
+        new SandOreGeneration(ModBlocks.AMBER_ORE, 25, 0, 0, 128, 2);
+        new SandOreGeneration(ModBlocks.AQUAMARINE_ORE, 25, 0, 0, 128, 2);
+
+        new NormalOreGeneration(ModBlocks.PERIDOT_ORE, 2, 0, 0, 36, 3);
+        new NormalOreGeneration(ModBlocks.RUBY_ORE, 2, 0, 0, 36, 3);
+        new NormalOreGeneration(ModBlocks.SAPPHIRE_ORE, 2, 0, 0, 36, 3);
+        new NormalOreGeneration(ModBlocks.TOPAZ_ORE, 1, 0, 0, 24, 3);
+        new NormalOreGeneration(ModBlocks.TANZANITE_ORE, 1, 0, 0, 24, 3);
+
+        new NetherOreGeneration(ModBlocks.VULCANITE_ORE, 3, 10, 10, 128, 3);
+        new NetherOreGeneration(ModBlocks.KYANITE_ORE, 3, 10, 10, 128, 3);
     }
 
     static class Client extends SideProxy {

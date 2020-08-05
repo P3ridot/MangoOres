@@ -23,6 +23,7 @@ public class ModItems {
     //ITEMS
     public static final Item IRON_ROD = register("iron_rod", new Item(new Item.Properties().group(ModItemGroups.ITEMS)));
     public static final Item GOLD_ROD = register("gold_rod", new Item(new Item.Properties().group(ModItemGroups.ITEMS)));
+    public static final Item RAINBOW_ELEMENT = register("rainbow_element", new Item(new Item.Properties().group(ModItemGroups.ITEMS)));
 
     //ITEMS - METALS - INGOTS
     public static final Item MAGMONITE_INGOT = register("magmonite_ingot", new Item(new Item.Properties().group(ModItemGroups.ITEMS)));

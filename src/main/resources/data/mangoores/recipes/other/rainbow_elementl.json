@@ -1,0 +1,40 @@
+{
+  "result": {
+    "item": "mangoores:rainbow_element"
+  },
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "123",
+    "456",
+    "789"
+  ],
+  "key": {
+    "1": {
+      "tag": "forge:dyes/yellow"
+    },
+    "2": {
+      "tag": "forge:dyes/lime"
+    },
+    "3": {
+      "tag": "forge:dyes/light_blue"
+    },
+    "4": {
+      "tag": "forge:dyes/orange"
+    },
+    "5": {
+      "tag": "forge:dyes/white"
+    },
+    "6": {
+      "tag": "forge:dyes/blue"
+    },
+    "7": {
+      "tag": "forge:dyes/red"
+    },
+    "8": {
+      "tag": "forge:dyes/black"
+    },
+    "9": {
+      "tag": "forge:dyes/purple"
+    }
+  }
+}

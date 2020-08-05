@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "mangoores:item/marker"
+    "layer0": "mangoores:item/other/rainbow_element"
   }
 }
